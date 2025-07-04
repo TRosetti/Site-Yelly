@@ -1,12 +1,11 @@
-
-import {Header} from "@/components/Header"
-
+import { Header } from "@/components/Header"
+import { Tarja } from "@/components/Tarja";
 
 export default function Home() {
   return (
     <div>
-      <Header></Header>
-
+      <Tarja />
+      <Header />
       
     </div>
   );
