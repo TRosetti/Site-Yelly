@@ -4,6 +4,7 @@ import { Hero } from "@/components/Hero";
 import { Bandeiras } from "@/components/Bandeiras";
 import { Beneficios } from "@/components/Beneficios";
 import { Rotulos } from "@/components/Rotulos"
+import { Slider } from "@/components/Slider";
 
 export default function Home() {
   return (
@@ -40,6 +41,7 @@ export default function Home() {
       <Beneficios /> 
       <Rotulos />
       <Tarja />
+      <Slider />
     </div>
   );
 }
