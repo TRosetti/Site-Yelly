@@ -1,0 +1,70 @@
+.bandeiras{
+    max-width: 1440px;
+    width: 70%;
+    padding: 32px 70px;
+    background-color: #fff;
+    margin: auto;
+    position: relative;
+    
+    .imageContainer{
+       width: 100%; /* usa a largura total do container */
+        overflow: hidden;
+        margin: auto;
+    }
+
+    .imagens{
+       display: flex;
+        align-items: center;
+        gap: 20px;
+        width: max-content; /* fundamental pro loop funcionar sem corte */
+        animation: slideLeft 20s linear infinite;
+    }
+
+    .imageContainer::before,.imageContainer::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 80px;
+        height: 100%;
+        z-index: 2;
+        pointer-events: none;
+    }
+
+    .imageContainer::before {
+        left: 70px;
+        background: linear-gradient(to right, #fff 0%, transparent 100%);
+    }
+
+    .imageContainer::after {
+        right: 70px;
+        background: linear-gradient(to left, #fff 0%, transparent 100%);
+    }
+    
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 600px) {
+    .bandeiras{
+        padding: 32px 16px;
+
+        .imageContainer::before {
+            left: 10px;
+        
+        }
+
+        .imageContainer::after {
+            right: 10px;
+        
+        }
+    }
+
+    
+}

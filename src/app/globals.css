@@ -1,6 +1,11 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --roc-grotesk: "roc-grotesk", sans-serif;
+  --roc-grotesk-compressed: "roc-grotesk-compressed", sans-serif;
+  --roc-grotesk-condensed: "roc-grotesk-condensed", sans-serif;
+  --roc-grotesk-wide: "roc-grotesk-wide", sans-serif;
+  --roc-grotesk-extrawide: "roc-grotesk-extrawide", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -36,3 +41,12 @@ a {
     color-scheme: dark;
   }
 } */
+
+.linkButton{
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 500;
+  color: #1a1a1a;
+  background-color: #FFC700;
+
+}

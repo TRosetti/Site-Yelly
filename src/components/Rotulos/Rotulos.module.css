@@ -1,0 +1,148 @@
+.Rotulos{
+    width: 100%;
+    background-color: #FFF;
+}
+
+.rotulosContainer{
+    max-width: 1440px;
+    width: 100%;
+    padding: 32px 70px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    h2{
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 700;
+        letter-spacing: -0.2px;
+        text-align: center;
+    }
+
+    .cardContainer{
+        display: grid; 
+        grid-template-columns: 1fr 2px 1fr 2px 1fr 2px 1fr;
+        gap: 32px;
+        .card{
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 16px;
+
+            .imgContianer{
+                /* max-width: 189px; */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+
+                img{
+
+                    height: 64px;
+                    width: fit-content;
+                }
+                h3{
+                    font-size: 45px;
+                    line-height: 32px;
+                    letter-spacing: -0.5px;
+                    text-transform: uppercase;
+                    font-family: var(--roc-grotesk-condensed);
+                }
+                
+            }
+
+            .textContainer{
+                h3{
+                    display: none;
+                }
+                p{
+                    font-size: 20px;
+                    line-height: 24px;
+                }
+
+            }
+            
+        }
+
+        .divisor{
+            width: 2px;
+            height: 100%;
+            background-color: #1a1a1a40;
+        }
+        
+    }
+}
+
+@media (max-width: 1080px) {
+    .rotulosContainer .cardContainer{
+        grid-template-columns: 1fr  2px 1fr;
+
+        .divisor2{
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 680px){
+
+    
+    .rotulosContainer {
+        padding: 32px 16px;
+
+        .cardContainer{
+            grid-template-columns: 1fr;
+            gap: 16px;
+
+
+            .divisor2{
+                display: block;
+            }
+            .divisor{
+                height: 2px;
+                width: 100%;
+            }
+
+            .imgContianer{
+                h3{
+                    display: none;
+                }
+            }
+
+            .card{
+                display: flex;
+                flex-direction: row;
+                gap: 16px;
+
+                .imgContianer{
+                    width: 50%;
+                }
+                .textContainer{
+                    width: 50%;
+                    gap: 8px;
+
+                    text-align: left;
+
+                    h3{
+                        display: block;
+                        font-size: 30px;
+                        line-height: 32px;
+                        letter-spacing: -0.5px;
+                        text-transform: uppercase;
+                        font-family: var(--roc-grotesk-condensed);
+                    }
+                    p{
+                        font-size: 12px;
+                        line-height: 16px;
+                    }
+
+                
+                }
+            
+            }
+
+        }
+    }
+}

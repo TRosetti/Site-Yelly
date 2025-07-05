@@ -1,0 +1,191 @@
+.beneficios{
+    background-color: #f5f5f5;
+}
+
+.containerBeneficios{
+    max-width: 1440px;
+    width: 100%;
+    margin: auto;
+    padding: 64px 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    .titleContainer{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        h2{
+            font-size: 24px;
+            line-height: 32px;
+            font-weight: 700;
+            letter-spacing: -0.2px;
+        }
+
+        p{
+            font-size: 16px;
+            line-height: 16px;
+            letter-spacing: -0.2px;
+        }
+    }
+
+    .beneficiosContainer{
+        display: flex;
+        flex-direction: row;
+        gap: 80px;
+
+        .imageContainer{
+            max-width: 420px;
+            width: 100%;
+ 
+            img{
+                width: 100%;
+            }
+        }
+
+        .textContainer{
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+
+            .grade{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+
+                .card{
+                    display: flex;
+                    gap: 20px;
+                    padding: 16px;
+                    
+                }
+
+                img{
+                    width: 32px;
+                    height: 32px;
+                }
+
+                .texto{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+
+                    h3{
+                        font-size: 18px;
+                        line-height: 24px;
+                        font-weight: 500;
+                    }
+                    p{
+                        font-size: 14px;
+                        line-height: 16px;
+                    }
+                }
+                
+            }
+
+            a{
+                align-self: flex-start;
+                font-size: 16px;
+                line-height: 16px;
+                font-weight: 500;
+                padding: 8px 32px;
+                background-color: #ffc700;
+                border-radius: 100px;
+            }
+            
+        }
+
+    }
+
+    
+}
+
+@media (max-width: 1080px){
+    .containerBeneficios{
+        
+        .beneficiosContainer{
+            flex-direction: column;
+            gap: 32px;
+
+            .imageContainer{
+                max-width: 80%;
+                width: 100%;
+                
+                margin: auto;
+
+                img{
+                    width: 100%;
+                }
+
+                
+            }
+
+           
+
+            .textContainer a{
+                align-self: center;
+            }
+            
+        }
+    }
+}
+
+@media (max-width: 850px){
+
+    .containerBeneficios{
+       
+        .beneficiosContainer  .imageContainer{
+            max-width: 100%;
+        }
+
+    } 
+}
+
+@media (max-width: 680px){
+
+    .containerBeneficios{
+        padding: 32px 16px;
+
+        .titleContainer{
+            h2{
+                font-size: 22px;
+                line-height: 28px;
+                letter-spacing: -0.5px;
+            }
+
+            p{
+                font-size: 12px;
+                line-height: 16px;
+            }
+        }
+        
+        .beneficiosContainer{
+
+            .textContainer{
+                
+                .grade{
+                    grid-template-columns: 1fr;
+                    gap: 16px;
+
+                    .card{
+                        gap: 16px;
+                        padding: 0;
+                        .texto{
+                            h3{
+                                font-size: 16px;
+                                line-height: 24px;
+                            }
+                            p{
+                                font-size: 14px;
+                                line-height: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    } 
+}

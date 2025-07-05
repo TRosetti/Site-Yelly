@@ -1,7 +1,8 @@
 .header{
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-    
+    background-color: #fff;
 }
+
 
 .desktop{
     max-width: 1440px;
@@ -117,7 +118,7 @@
     display: none;
 }
 
-@media (max-width: 1070px) {
+@media (max-width: 1080px) {
     .desktop{
         display: none;
     }
@@ -153,27 +154,43 @@
             gap: 16px;
         }
 
+        
+        
+
         nav{
-            position: absolute;
+            position: fixed;
+            top: 104px; /* ou a altura do seu header */
+            left: 0;
+            width: 100%;
+            background-color: #fafafa;
+            z-index: 999;
             display: flex;
             flex-direction: column;
             gap: 32px;
-            top: 100%;
-            left: 0;
-            background-color: #fafafa;
-            width: 100%;
-            z-index: 1;
-            border-top: 1px solid rgba(0, 0, 0, 0.3);
-            padding: 16px 0;
+            padding: 0; /* manter zerado por padrão */
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s ease;
 
             li{
-                padding: 8px 32px;
+                
                 font-size: 20px;
                 line-height: 32px;
-                font-weight: 400;
+                font-weight: 500;
                 list-style: none;
+                /* cursor: pointer; */
+                padding: 0;
+            }
+            li a{
+                padding: 8px 32px;
+                width: 100%;
+                display: block;
             }
 
+            .dropdown {
+                padding: 8px 32px;
+                cursor: pointer;
+            }
             .alignCenter{
                 display: flex;
                 align-items: center;
@@ -182,13 +199,62 @@
             .alignRight{
                 margin-left: auto;
             }
+
+           
             .submenu li{
                 font-size: 18px;
-                display: none
+                
             }
+            /* Submenu escondido por padrão */
+            .submenu {
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.4s ease;
+            }
+
+            /* Submenu visível */
+            .show {
+                max-height: 500px; /* ou o suficiente pro seu conteúdo */
+            }
+
+            .botoes{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                font-size: 16px;
+                line-height: 16px;
+
+                .btn1{
+                    font-weight: 700;
+                    background-color: #FFC700;
+                    border-radius: 100px;
+                    padding: 8px 48px;
+                }
+                .btn2{
+                    font-weight: 500;
+                    border: 1px solid #1a1a1a;
+                    border-radius: 100px;
+                    padding: 8px 48px;
+                }
+            }
+
+            a:active{
+                background-color: #1a1a1a;
+                color: #fff
+            }
+            
             
         };
     }
+    
+    .mobile.menuAberto nav {
+            max-height: 1000px; /* grande o suficiente */
+            padding: 16px 0;
+    }
+    
+
     
 }
 

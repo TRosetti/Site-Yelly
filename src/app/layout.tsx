@@ -22,6 +22,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
+      <head>
+        <link rel="stylesheet" href="https://use.typekit.net/hwr7pja.css" />
+      </head>
       <body className={`${poppins.variable}`}>
         {children}
       </body>
