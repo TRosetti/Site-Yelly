@@ -4,7 +4,8 @@ import { Hero } from "@/components/Hero";
 import { Bandeiras } from "@/components/Bandeiras";
 import { Beneficios } from "@/components/Beneficios";
 import { Rotulos } from "@/components/Rotulos"
-import { Slider } from "@/components/Slider";
+import { ProcessoDeCompra } from "@/components/ProcessoDeCompra";
+
 
 export default function Home() {
   return (
@@ -41,7 +42,8 @@ export default function Home() {
       <Beneficios /> 
       <Rotulos />
       <Tarja />
-      <Slider />
-    </div>
+     
+      <ProcessoDeCompra /> {/* Se eu quiser sem o hero é só adicionar  <ProcessoDeCompra apenasProcessoDeCompra={true} /> */}
+    </div>  
   );
 }

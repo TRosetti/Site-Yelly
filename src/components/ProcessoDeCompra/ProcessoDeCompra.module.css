@@ -1,0 +1,117 @@
+.processoDeCompra {
+    background-color: #1a1a1a;
+   
+
+    
+    h2, p,li{
+        color: #fff;
+    }
+
+    .container {
+        
+        
+        .hero{
+            
+            
+            padding: 64px 70px;
+            
+            background: url('https://yelly.com.br/wp-content/uploads/2025/04/BANNER-PRINCIPAL.png');
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+
+            .titleContainer{
+                max-width: 1440px;
+                display: flex;
+                flex-direction: column;
+                margin: auto;
+                gap: 16px;
+                text-align: center;
+
+                h2 {
+                    font-size: 28px;
+                    line-height: 32px;
+                    font-weight: 700;
+                    letter-spacing: -0.2px;
+                }
+                p{
+                    font-size: 16px;
+                    line-height: 16px;
+                    font-weight: 400;
+                    letter-spacing: -0.2px;
+                }
+            }
+
+            .heroContainer{
+                max-width: 1440px;
+                display: flex;
+                flex-direction: column;
+                margin: auto;
+                display: flex;
+                flex-direction: row;
+                gap: 64px;
+                
+                .imgContainer1{
+                    max-width: 461px;
+                    width: 100%;
+
+                    img{
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+
+                .textHeroConainer{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 24px;
+
+                    ul {
+                        list-style-position: inside;
+                      }
+
+                    li{
+                        font-size: 16px;
+                        line-height: 32px;
+                        font-weight: 500;
+                        letter-spacing: -0.5px;
+                        margin-bottom: 8px;
+                    }
+                    a{
+                        font-size: 16px;
+                        line-height: 16px;
+                        padding: 8px 24px;
+                        background: linear-gradient(90deg, 
+                            #FFEE99 0%, 
+                            #FFC700 20%, 
+                            #FFDD33 35%, 
+                            #FFFF33 60%, 
+                            #FFEE33 85%, 
+                            #F0FF66 100%
+                        );
+                        transition: transform 0.2s;
+                        align-self: flex-start;
+                        border-radius: 100px;
+                    }
+
+                    a:hover {
+                        transform: scale(1.05);
+                    }
+                }
+
+                .imgContainer2{
+                    max-width: 180px;
+                    width: 100%;
+                    
+                    img{
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+
