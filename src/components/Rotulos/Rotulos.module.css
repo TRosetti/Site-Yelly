@@ -42,7 +42,7 @@
                 img{
 
                     height: 64px;
-                    width: fit-content;
+                    /* width: max-content; */
                 }
                 h3{
                     font-size: 45px;

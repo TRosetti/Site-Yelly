@@ -136,6 +136,10 @@ export function ProcessoDeCompra({ apenasProcessoDeCompra = false }: ProcessoDeC
                         
                     </div>
                 </div>
+
+                <div className="products">
+                    
+                </div>
             </div>
         </div>
       
