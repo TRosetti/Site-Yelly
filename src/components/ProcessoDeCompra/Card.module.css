@@ -1,0 +1,315 @@
+.card{
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    padding: 64px 70px;
+
+
+    strong{
+        color: #fff;
+        font-weight: 700;
+    }
+
+    h2{
+        font-size: 28px;
+        line-height: 32px;
+        font-weight: 400;
+        letter-spacing: -0.2px;
+        text-align: center;
+    }
+
+    span{
+        color: #fff;
+    }
+
+
+}
+
+.recebimentoETaxas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    max-width: 930px;
+    width: 100%;
+
+    .recebimentos{
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+        
+        h3{
+            font-size: 22px;
+            line-height: 24px;
+            color: #fff;
+            font-weight: 400;
+        }
+
+        .divisor{
+            width: 4px;
+            
+            background-color: #f5f5f5;
+        }
+    }
+
+    .taxasContainer{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr ;
+        gap: 48px;
+        width: 100%;
+        
+
+        .taxas{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            gap: 16px;
+            background-color: #282828;
+            padding: 8px 16px;
+            border-radius: 4px;
+
+            p{
+                font-size: 20px;
+                line-height: 28px;
+                font-weight: 400;
+            }
+            
+            p:last-of-type{
+                font-weight: 700;
+            }
+        }
+
+        
+    }
+}
+
+.selecionarPlanoContainer {
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+
+    .planos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+        
+        flex-wrap: wrap;  /* Quenbra para a próxima linha caso não caiba na horizontal*/
+    }
+
+
+
+    .planoButton {
+        background-color: #1a1a1a;
+        border: 1px solid #f5f5f560;
+        border-radius: 100px;
+        padding: 0px 24px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        position: relative;
+        cursor: pointer;
+        color: white;
+        font-weight: 700;
+        letter-spacing: 2px;
+        transition: all 0.2s;
+        font-family: var(--roc-grotesk-condensed);
+
+
+        .bolinhaExterna{
+            width: 16px;
+            height: 16px;
+            border: 1px solid #f5f5f5;
+            background-color: transparent;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .bolinha {
+                width: 12px;
+                height: 12px;
+                
+                border-radius: 50%;
+            }
+
+            .bolinhaSelecionada {
+                width: 12px;
+                height: 12px;
+                background: #FFFF00;
+                border-radius: 50%;
+            }
+        }
+
+
+
+        .nome{
+            font-size: 24px;
+            line-height: 32px;
+        }
+        .destaque{
+            font-size: 20px;
+            line-height: 32px;
+            color: #FFFF00;
+        }
+
+
+
+    }
+    .planoButton:hover {
+        border-color: #f5f5f5;
+    }
+    .selecionado {
+        background-color: #323232;
+    }
+
+}
+
+
+@media (max-width: 1080px){
+    .selecionarPlanoContainer{
+
+        flex-direction: column;
+        gap: 16px;
+
+        
+
+        .planos{
+            /* Aqui muda para grid, pois a ordem dos elementos vão mudar */
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: 
+            "max economic"
+            "basic basic";
+            gap: 16px;
+
+
+            .max {
+                grid-area: max;
+            }
+
+            .basic {
+                grid-area: basic;
+            }
+
+            .economico {
+                grid-area: economico;
+            }
+
+            .planoButton {
+                justify-content: center;
+                width: 100%; /* para o basic ocupar a linha toda */
+            }
+        }
+
+    }
+
+    .recebimentoETaxas .recebimentos{
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+
+        h3{
+            text-align: center;
+        
+        }
+
+        .divisor{
+            width: 4px;
+            height: 100%;
+            background-color: #f5f5f5;
+        }
+
+
+
+        .taxasContainer{
+            gap: 32x;
+            
+            
+
+            .taxas{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                
+               
+
+                p{
+                    font-size: 20px;
+                    line-height: 28px;
+                    font-weight: 400;
+                }
+                
+                p:last-of-type{
+                    font-weight: 700;
+                }
+            }
+
+            
+        }
+    }
+
+}
+
+
+
+@media (max-width: 680px){
+
+    .card{
+        padding: 32px 16px;
+        h2{
+            font-size: 24px;
+            line-height: 32px;
+        }
+
+        span{
+            font-size: 12px;
+            line-height: 16px;
+        }
+
+
+    }
+
+    .selecionarPlanoContainer{
+
+    
+        .planos{
+            
+            .nome{
+                font-size: 22px;
+                line-height: 32px;
+            }
+            .destaque{
+                font-size: 20px;
+                line-height: 32px;
+                color: #FFFF00;
+            }
+
+        }
+        
+
+    }
+
+    .recebimentoETaxas .recebimentos{
+
+        gap: 2px;
+        
+        
+        h3{
+            font-size: 15px;
+            line-height: 28px;
+        }
+
+        
+    }
+
+}

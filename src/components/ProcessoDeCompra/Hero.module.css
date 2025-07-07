@@ -1,6 +1,8 @@
 .processoDeCompra {
     background-color: #1a1a1a;
+    
    
+    
 
     
     h2, p,li{
@@ -11,15 +13,30 @@
         
         
         .hero{
-            
-            
+
+            position: relative;
             padding: 64px 70px;
             
-            background: url('https://yelly.com.br/wp-content/uploads/2025/04/BANNER-PRINCIPAL.png');
+            background: url("https://yelly.com.br/wp-content/uploads/2025/04/BANNER-PRINCIPAL.png");
             display: flex;
             flex-direction: column;
             gap: 32px;
 
+           
+
+            &::after{
+                content: "";
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(transparent 70%, #1a1a19 );
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+            };
+
+            z-index: 100;
+           
             .titleContainer{
                 max-width: 1440px;
                 display: flex;
@@ -43,9 +60,7 @@
             }
 
             .heroContainer{
-                max-width: 1440px;
-                display: flex;
-                flex-direction: column;
+                max-width: 1440px;                
                 margin: auto;
                 display: flex;
                 flex-direction: row;
@@ -65,6 +80,8 @@
                     display: flex;
                     flex-direction: column;
                     gap: 24px;
+                    max-width: 531px;
+                    width: 100%;
 
                     ul {
                         list-style-position: inside;
@@ -114,4 +131,99 @@
     }
 }
 
+
+@media (max-width: 1069px){
+
+    .container{
+        .hero{
+            .heroContainer{
+
+                .imgContainer2{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 850px){
+
+    .processoDeCompra{
+
+        .container{
+
+            .hero{
+
+                &::after{
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(transparent 90%, #1a1a19 );
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: -1;
+                };
+                
+                .heroContainer{
+                    flex-direction: column;
+
+                    .imgContainer1{
+                        max-width: 100%;
+                        margin: auto;
+                    }
+                }
+                    
+            
+                
+            }
+        }
+
+    }
+
+    
+}
+
+
+@media (max-width: 680px){
+
+    .processoDeCompra{
+
+        .container{
+
+            .hero{
+
+                padding: 32px 16px;
+                
+                .heroContainer{
+                    flex-direction: column;
+
+                    .textHeroConainer{
+                        gap: 16px;
+
+                        li{
+                            line-height: 16px;
+                            margin-bottom: 16px;
+                        }
+                        
+                        a{
+                            align-self: center;
+                        }
+                    }
+                    .imgContainer1{
+                        max-width: 100%;
+                        margin: auto;
+                    }
+                }
+                    
+            
+                
+            }
+        }
+
+    }
+
+    
+}
 
