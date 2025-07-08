@@ -3,7 +3,6 @@ import stylesHero from './Hero.module.css';
 import stylesCard from './Card.module.css';
 import { useState } from 'react';
 import { useTaxas } from '@/hooks/useTaxas';
-import { TipoPlano } from '@/types/taxas';
 import { MaquinasYelly } from '@/constants/maquinas';
 import { Slider } from '../Slider';
 
