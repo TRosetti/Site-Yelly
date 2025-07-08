@@ -2,7 +2,7 @@
 import stylesHero from './Hero.module.css';
 import stylesCard from './Card.module.css';
 import { useState } from 'react';
-
+import { useTaxas } from '@/hooks/useTaxas';
 
 
 interface ProcessoDeCompraProps {
@@ -20,7 +20,8 @@ export function ProcessoDeCompra({ apenasProcessoDeCompra = false }: ProcessoDeC
                 <>
                 Venda mais com as <strong>menores taxas!</strong>
                 </>
-            )
+            ),
+            
         },
         {
             nome: 'BASIC', 
@@ -30,7 +31,8 @@ export function ProcessoDeCompra({ apenasProcessoDeCompra = false }: ProcessoDeC
                 <>
                   Máquinas com os  <strong>menores preços!</strong> 🔥
                 </>
-            )
+            ),
+            
         },
         {
             nome: "ECONÔMICO", 
@@ -39,12 +41,33 @@ export function ProcessoDeCompra({ apenasProcessoDeCompra = false }: ProcessoDeC
                 <>
                   Plano especial para receber <strong>sem antecipação!</strong>
                 </>
-            ) 
+            ),
+            
 
         },
     ]
 
     const planoAtual = planos.find(p =>p.nome === planoSelecionado)
+
+
+    const { taxas } = useTaxas();
+
+    let plano = planoSelecionado.toLowerCase();
+
+    if(plano == "econômico"){
+        plano = 'economic'
+    }
+
+
+    const planoTaxas = taxas?.master?.[plano] as number[] | undefined;
+
+
+    console.log(plano)
+
+    // console.log("Taxas débito max:", taxas?.master?.max?.[0] )
+
+
+   
 
   return (
     <section className={stylesHero.processoDeCompra}>
@@ -123,15 +146,17 @@ export function ProcessoDeCompra({ apenasProcessoDeCompra = false }: ProcessoDeC
                     <div className={stylesCard.taxasContainer}>
                         <div className={stylesCard.taxas}>
                             <p>Débito:</p>
-                            <p>1,39%</p>
+                            {/* <p>{taxas?.master?.max?.[0]}</p> */}
+                            <p>{(planoTaxas?.[0] ?? 0).toFixed(2).replace('.', ',')}%</p>
+                            
                         </div>
                         <div className={stylesCard.taxas}>
                             <p>Crédito 1x:</p>
-                            <p>2,91%</p>
+                            <p>{(planoTaxas?.[1] ?? 0).toFixed(2).replace('.', ',')}%</p>
                         </div>  
                         <div className={stylesCard.taxas}>
                             <p>Crédito 12x:</p>
-                            <p>11,80%</p>
+                            <p>{(planoTaxas?.[12] ?? 0).toFixed(2).replace('.', ',')}%</p>
                         </div>
                         
                     </div>
