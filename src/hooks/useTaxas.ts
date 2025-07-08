@@ -13,6 +13,6 @@ export function useTaxas(){
             setParcelas(res.parcelas);
         }).finally(() => setLoading(false))
     }, []);
-    
+
     return{ taxas, parcelas, loading}
 }

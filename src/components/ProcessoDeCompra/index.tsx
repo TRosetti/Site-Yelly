@@ -3,6 +3,9 @@ import stylesHero from './Hero.module.css';
 import stylesCard from './Card.module.css';
 import { useState } from 'react';
 import { useTaxas } from '@/hooks/useTaxas';
+import { TipoPlano } from '@/types/taxas';
+import { MaquinasYelly } from '@/constants/maquinas';
+import { Slider } from '../Slider';
 
 
 interface ProcessoDeCompraProps {
@@ -61,8 +64,15 @@ export function ProcessoDeCompra({ apenasProcessoDeCompra = false }: ProcessoDeC
 
     const planoTaxas = taxas?.master?.[plano] as number[] | undefined;
 
+    const produtosDoPlano = MaquinasYelly[plano];
 
-    console.log(plano)
+ 
+
+    
+
+    // console.log(MaquinasYelly[maquinasMax].Mini.name)
+    // console.log(MaquinasYelly[maquinasBasic])
+    // console.log(MaquinasYelly[maquinasEconomic])
 
     // console.log("Taxas débito max:", taxas?.master?.max?.[0] )
 
@@ -163,7 +173,14 @@ export function ProcessoDeCompra({ apenasProcessoDeCompra = false }: ProcessoDeC
                 </div>
 
                 <div className="products">
-                    
+                    <Slider slidesPerView={3}>
+                        {Object.values(produtosDoPlano).map((produto, i) => (
+                            <div className={stylesCard.cardProdutos} key={i} >
+                                <span>{produto.desc}</span>
+                                <h3>{produto.name}</h3>
+                            </div>
+                        ))}
+                    </Slider>
                 </div>
             </div>
         </div>
