@@ -1,4 +1,4 @@
-import { MaquininhaPorPlano } from "@/types/Maquinas";
+import { MaquininhaPorPlano } from "@/types/maquinas";
 
 export const MaquinasYelly: MaquininhaPorPlano = {
 

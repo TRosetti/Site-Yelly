@@ -7,6 +7,7 @@ import { Rotulos } from "@/components/Rotulos"
 import { ProcessoDeCompra } from "@/components/ProcessoDeCompra";
 
 
+
 export default function Home() {
   return (
     <div>
@@ -44,6 +45,8 @@ export default function Home() {
       <Tarja />
      
       <ProcessoDeCompra /> {/* Se eu quiser sem o hero é só adicionar  <ProcessoDeCompra apenasProcessoDeCompra={true} /> */}
+
+    
     </div>  
   );
 }

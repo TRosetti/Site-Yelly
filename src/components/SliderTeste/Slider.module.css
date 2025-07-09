@@ -1,10 +1,9 @@
 .sliderContainer {
   width: 100%;
-  max-width: 1440px;
-  margin: auto;
-  
+  max-width: 100%;
   overflow: hidden;
   box-sizing: border-box;
+  padding: 32px 16px;
 }
 
 .sliderContainer :global(.swiper) {
@@ -14,8 +13,7 @@
 }
 
 .sliderContainer :global(.swiper-wrapper) {
-  width: 100% !important;
-  max-width: 100%;
+  width: 100%;
   box-sizing: border-box;
 }
 
@@ -23,5 +21,3 @@
   min-width: 0;
   box-sizing: border-box;
 }
-
-

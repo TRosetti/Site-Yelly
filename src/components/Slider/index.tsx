@@ -4,9 +4,11 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/navigation'
+import 'swiper/css/pagination'
 import { Navigation } from 'swiper/modules'
 import styles from './Slider.module.css'
 import React from 'react'
+// import { responseCookiesToRequestCookies } from 'next/dist/server/web/spec-extension/adapters/request-cookies'
 
 interface SliderProps {
   children: React.ReactNode[] 
@@ -22,7 +24,20 @@ interface SliderProps {
 
 export function Slider({
   children,
-  breakpoints,
+  breakpoints ={
+    400:{
+       slidesPerView: 1,
+    },
+    650: {
+      slidesPerView: 1.2,
+    },
+    1080:{
+       slidesPerView: 3,
+    },
+    
+    
+    
+  },
   slidesPerView = 1.2,
   spaceBetween = 16,
 }: SliderProps) {
@@ -39,6 +54,8 @@ export function Slider({
           <SwiperSlide key={index}>{child}</SwiperSlide>
         ))}
       </Swiper>
+
     </div>
   )
 }
+

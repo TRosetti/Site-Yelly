@@ -5,17 +5,20 @@ import { useState } from 'react';
 import { useTaxas } from '@/hooks/useTaxas';
 import { MaquinasYelly } from '@/constants/maquinas';
 import { Slider } from '../Slider';
+import { TipoPlano } from '@/types/taxas';
 
+// import { SliderTeste } from "@/components/SliderTeste";
 
 interface ProcessoDeCompraProps {
   apenasProcessoDeCompra?: boolean;
 }
 
 export function ProcessoDeCompra({ apenasProcessoDeCompra = false }: ProcessoDeCompraProps) {
-    const [planoSelecionado, setPlanoSelecionado] = useState("MAX");
+    const [planoSelecionado, setPlanoSelecionado] = useState<TipoPlano>("max");
 
     const planos = [
         {
+            id: 'max',
             nome: 'MAX', 
             h3Recebimentos: "Recebimento no dia seguinte", 
             h3destaque: (
@@ -26,6 +29,7 @@ export function ProcessoDeCompra({ apenasProcessoDeCompra = false }: ProcessoDeC
             
         },
         {
+            id: 'basic',
             nome: 'BASIC', 
             destaque: "ATÉ 70% OFF 🔥", 
             h3Recebimentos: "Recebimento no dia seguinte", 
@@ -37,6 +41,7 @@ export function ProcessoDeCompra({ apenasProcessoDeCompra = false }: ProcessoDeC
             
         },
         {
+            id: "economic", 
             nome: "ECONÔMICO", 
             h3Recebimentos: "Recebimento conforme parcelas", 
             h3destaque: (
@@ -49,16 +54,14 @@ export function ProcessoDeCompra({ apenasProcessoDeCompra = false }: ProcessoDeC
         },
     ]
 
-    const planoAtual = planos.find(p =>p.nome === planoSelecionado)
+    const planoAtual = planos.find(p =>p.id === planoSelecionado)
 
 
     const { taxas } = useTaxas();
 
-    let plano = planoSelecionado.toLowerCase();
+    const plano: TipoPlano = planoSelecionado;
 
-    if(plano == "econômico"){
-        plano = 'economic'
-    }
+   
 
 
     const planoTaxas = taxas?.master?.[plano] as number[] | undefined;
@@ -123,18 +126,18 @@ export function ProcessoDeCompra({ apenasProcessoDeCompra = false }: ProcessoDeC
 
                         {planos.map((plano) => (
                             <button
-                                key={plano.nome}
+                                key={plano.id}
                                 className={` 
                                     ${stylesCard.planoButton} 
-                                    ${stylesCard[plano.nome.toLowerCase()]}
-                                    ${planoSelecionado === plano.nome ? stylesCard.selecionado: ""}
+                                    ${stylesCard[plano.id]}
+                                    ${planoSelecionado === plano.id? stylesCard.selecionado: ""}
                                 `}
-                                onClick={() => setPlanoSelecionado(plano.nome)}
+                                onClick={() => setPlanoSelecionado(plano.id as TipoPlano)}
                             >
 
 
                                 <span className={stylesCard.bolinhaExterna}>
-                                    <span className={`${stylesCard.bolinha} ${ planoSelecionado === plano.nome ? stylesCard.bolinhaSelecionada: ""}`}></span>
+                                    <span className={`${stylesCard.bolinha} ${ planoSelecionado === plano.id ? stylesCard.bolinhaSelecionada: ""}`}></span>
                                 </span>
                                 <span className={stylesCard.nome}>{plano.nome}</span>
                                 {plano.destaque && <span className={stylesCard.destaque}>{plano.destaque}</span>}
@@ -171,8 +174,8 @@ export function ProcessoDeCompra({ apenasProcessoDeCompra = false }: ProcessoDeC
                     </div>
                 </div>
 
-                <div className="products">
-                    <Slider slidesPerView={3}>
+                <div className={stylesCard.products}>
+                    <Slider >
                         {Object.values(produtosDoPlano).map((produto, i) => (
                             <div className={stylesCard.cardProdutos} key={i} >
                                 <span>{produto.desc}</span>
@@ -180,6 +183,16 @@ export function ProcessoDeCompra({ apenasProcessoDeCompra = false }: ProcessoDeC
                             </div>
                         ))}
                     </Slider>
+
+                    {/* <SliderTeste>
+                        
+                            <div style={{ background: '#444', height: 200, borderRadius: 8 }}>Slide 1</div>
+                            <div style={{ background: '#555', height: 200, borderRadius: 8 }}>Slide 2</div>
+                            <div style={{ background: '#666', height: 200, borderRadius: 8 }}>Slide 3</div>
+                            <div style={{ background: '#777', height: 200, borderRadius: 8 }}>Slide 4</div>
+
+
+                    </SliderTeste> */}
                 </div>
             </div>
         </div>

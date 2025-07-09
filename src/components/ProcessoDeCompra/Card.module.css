@@ -26,24 +26,29 @@
         color: #fff;
     }
 
-    .cardProdutos{
+    .products{
 
-        border: 2px solid #FFFFFF33;
-        border-radius: 8px;
-        padding: 32px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+        .cardProdutos{
+            width: 100%;
+
+            border: 2px solid #FFFFFF33;
+            border-radius: 8px;
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
 
 
-        h3,span{
-            color: #fff;
+            h3,span{
+                color: #fff;
+            }
+            
+            
+            
         }
-        
-        
-        
     }
+    
 
 }
 
