@@ -96,6 +96,9 @@
                 background-color: var(--amarelo-yelly);
                 border-radius: 100px;
             }
+            a:hover{
+                background-color: var(--hover-amarelo-yelly);
+            }
             
         }
 

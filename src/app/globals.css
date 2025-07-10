@@ -67,5 +67,11 @@ a {
   font-weight: 500;
   color: #1a1a1a;
   background-color: var(--amarelo-yelly);
+  border-radius: 100px;
+}
 
+.linkButton:hover{
+ 
+  background-color: var(--hover-amarelo-yelly);
+  
 }

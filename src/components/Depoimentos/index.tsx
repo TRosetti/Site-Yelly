@@ -61,6 +61,8 @@ export function Depoimentos(){
                     
                     
                     </Slider>
+
+                    <a href="#" className='linkButton' style={{padding:"8px 64px"}}>Peça a sua máquina agora!</a>
             
                
             </div>
