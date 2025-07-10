@@ -175,7 +175,7 @@ export function ProcessoDeCompra({ apenasProcessoDeCompra = false }: ProcessoDeC
                 </div>
 
                 <div className={stylesCard.products}>
-                    <Slider >
+                    <Slider  >
                         {Object.values(produtosDoPlano).map((produto, i) => (
                             <div className={stylesCard.cardProdutos} key={i} >
                                 <span>{produto.desc}</span>
@@ -183,16 +183,6 @@ export function ProcessoDeCompra({ apenasProcessoDeCompra = false }: ProcessoDeC
                             </div>
                         ))}
                     </Slider>
-
-                    {/* <SliderTeste>
-                        
-                            <div style={{ background: '#444', height: 200, borderRadius: 8 }}>Slide 1</div>
-                            <div style={{ background: '#555', height: 200, borderRadius: 8 }}>Slide 2</div>
-                            <div style={{ background: '#666', height: 200, borderRadius: 8 }}>Slide 3</div>
-                            <div style={{ background: '#777', height: 200, borderRadius: 8 }}>Slide 4</div>
-
-
-                    </SliderTeste> */}
                 </div>
             </div>
         </div>

@@ -25,18 +25,18 @@ interface SliderProps {
 export function Slider({
   children,
   breakpoints ={
-    400:{
-       slidesPerView: 1,
+    1080: {
+      slidesPerView: 3,
     },
-    650: {
+    850: {
+      slidesPerView: 2.2,
+    },
+    680: {
+      slidesPerView: 2.1,
+    },
+    0: {
       slidesPerView: 1.2,
     },
-    1080:{
-       slidesPerView: 3,
-    },
-    
-    
-    
   },
   slidesPerView = 1.2,
   spaceBetween = 16,
@@ -45,7 +45,7 @@ export function Slider({
     <div className={styles.sliderContainer}>
       <Swiper
         modules={[Navigation]}
-        navigation
+        // navigation
         spaceBetween={spaceBetween}
         slidesPerView={slidesPerView}
         breakpoints={breakpoints}
