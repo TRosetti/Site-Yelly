@@ -29,8 +29,7 @@
 
     
 
-    
-    
+   
     
 
 }
@@ -41,18 +40,59 @@
     cursor: grab;
     .cardProdutos{
 
-
-
+        background: linear-gradient(#1a1a1a 0% , #000 100%);
+        
         border: 2px solid #FFFFFF33;
         border-radius: 8px;
         padding: 32px;
-      
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 16px;
+              
+        .ladoImagem{
+            display: none;
+        }
 
+        .ladoTexto{
+             display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 16px;            
+            
+        }
+
+        &.isUnico{
+            padding: 64px;
+            .cardContainer{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                gap: 128px;
+            }
+            .ladoImagem{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                text-align: center;
+
+                img{
+                    max-width: 540px;
+                    width: 100%;
+                }
+            }
+
+            .ladoTexto{
+
+                img,h4{
+                    display: none;
+                }
+                
+                
+            }
+
+        }
+        
 
        
         h3,h4, p{
@@ -153,7 +193,76 @@
                 color: #1a1a1a;
             }
         }
+         hr{
+            width: 100%;
+            background-color: #FFFFFF33;
+            border: none;
+            height: 1px;
+        }
 
+        ul{
+            list-style-position: inside;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        li{
+            text-align: left;
+            font-size: 12px;
+            line-height: 16px;
+            font-weight: 400;
+        }
+
+                
+        li:nth-child(-n+2){
+            color: #FFFF00;
+            font-weight: 600;
+        }
+
+        li:nth-child(1)::after {
+            content: ' 🚚';
+        }
+        li:nth-child(2)::after {
+            content: ' 💳';
+            
+        }
+        
+        
+        &.yelly-minizinha li:nth-last-child(-n+3) {
+            color: #5d5c5c;
+            text-decoration-line: line-through;
+        }
+        &.yelly-mini li:nth-last-child(-n+3) {
+            color: #5d5c5c;
+            text-decoration-line: line-through;
+        }
+        &.yelly-pro li:nth-last-child(-n+2) {
+            color: #5d5c5c;
+            text-decoration-line: line-through;
+        }
+        
+        .maisInformacoes{
+            width: 100%;
+            padding: 2px 0;
+            margin: 0;
+            background-color: inherit;
+            color: #fff;
+            text-align: left;
+            font-size: 12px;
+            line-height: 16px;
+
+            img{
+                width: auto;
+                padding-left: 8px;
+            }
+        }
+
+        .maisInformacoes:hover{
+            background-color: inherit;
+            /* color: inherit; */
+            text-decoration: underline;
+        }
+        
         
     }
 }
@@ -388,6 +497,26 @@
         }
     }
 
+    .products{
+        .cardProdutos{
+
+
+            &.isUnico{
+                
+
+                .cardContainer{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 64px;
+                }
+               
+
+            }
+        }
+    }
+
 }
 
 
@@ -414,6 +543,30 @@
         gap: 8px !important;
     }
 
+
+    .products{
+        .cardProdutos{
+            
+            &.isUnico{
+                padding: 32px;
+                
+                .ladoImagem{
+                    display: none;
+                    
+                }
+
+                .ladoTexto{
+
+                    img,h4{
+                        display: inline-block;
+                    }
+                    
+                    
+                }
+
+            }
+        }
+    }
 }
 
 @media (max-width: 680px){
@@ -480,6 +633,87 @@
             }
         }
 
+    }
+
+    .products{
+        .cardProdutos{
+            
+            
+                .ladoTexto{
+
+                    h4{
+                        font-size: 28px;
+                    }
+                    
+                    
+                }
+        }
+    }
+
+}
+
+
+@media (max-width: 430px){
+
+
+    .products{
+        .cardProdutos{
+            
+            
+            .ladoTexto{
+
+                h4{
+                    font-size: 26px;
+                }
+                
+                .valores{
+                    
+
+                    p{
+                        font-size: 23px;
+                       
+                        span{
+                            font-size: 12px;
+                            
+                        }
+                    }
+
+                    .preco{
+                        
+                        .precoAntigo{
+                            font-size: 12px;
+                            
+                        }
+                        .parcelas{
+                            font-size: 40px;
+                            line-height: 48px;
+                            
+                            span{
+                                
+                                font-size: 28px;
+                                line-height: 48px;
+                                font-weight: 800;
+                            }
+                        }
+                        .precoNovo{
+                        
+                            font-weight: 500;
+                            font-size: 12px;
+                            line-height: 16px;
+                        }
+                    
+                    }
+                    
+                }
+                a{
+                    width: 100%;
+                }
+
+                
+
+                            
+            }
+        }
     }
 
 }

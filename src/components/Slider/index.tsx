@@ -25,14 +25,21 @@ interface SliderProps {
 export function Slider({
   children,
   breakpoints ={
-    1080: {
+    
+    1320:{
       slidesPerView: 3,
     },
+    1120:{
+      slidesPerView: 2.8,
+    },
+    1080: {
+      slidesPerView: 2.5,
+    },
     850: {
-      slidesPerView: 2.2,
+      slidesPerView: 2.1,
     },
     680: {
-      slidesPerView: 2.1,
+      slidesPerView: 1.4,
     },
     0: {
       slidesPerView: 1.1,
@@ -41,14 +48,19 @@ export function Slider({
   slidesPerView = 1.2,
   spaceBetween = 16,
 }: SliderProps) {
+  const isSingleSlide = children.length === 1;
+
   return (
     <div className={styles.sliderContainer}>
       <Swiper
+        key={children.length}
         modules={[Navigation]}
         // navigation
         spaceBetween={spaceBetween}
-        slidesPerView={slidesPerView}
-        breakpoints={breakpoints}
+        slidesPerView={isSingleSlide? 1 : slidesPerView} // verifica se tem mais apenas um slide para deixar ele maior ou não 
+        breakpoints={isSingleSlide ? undefined : breakpoints}
+        
+        
       >
         {children.map((child, index) => (
           <SwiperSlide key={index}>{child}</SwiperSlide>

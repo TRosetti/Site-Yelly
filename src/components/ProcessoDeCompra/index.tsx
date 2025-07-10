@@ -6,6 +6,7 @@ import { useTaxas } from '@/hooks/useTaxas';
 import { MaquinasYelly } from '@/constants/maquinas';
 import { Slider } from '../Slider';
 import { TipoPlano } from '@/types/taxas';
+import Image from 'next/image';
 
 // import { SliderTeste } from "@/components/SliderTeste";
 
@@ -175,24 +176,49 @@ export function ProcessoDeCompra({ apenasProcessoDeCompra = false }: ProcessoDeC
                 </div>
 
                 <div className={stylesCard.products}>
-                    <Slider  >
+                    <Slider spaceBetween={16} >
                     {Object.values(produtosDoPlano).map((produto, i) => {
                         const className = produto.name.toLowerCase().replace(/\s+/g, '-');
+                        const isUnico = Object.values(produtosDoPlano).length == 1;
+
                         return (
-                            <div className={`${stylesCard.cardProdutos} ${stylesCard[className]}`} key={i}>
-                                <h4>{produto.desc}</h4>
-                                <img src={produto.imageUrl} alt={produto.name} />
-                                <h3>{produto.name}</h3>
-                                <div className={stylesCard.valores}>
-                                    <p>12x <br /> <span>sem juros de</span></p>
-                                    <div className={stylesCard.preco}>
-                                        <p className={stylesCard.precoAntigo}>de R$ <span>{produto.oldPrice.toFixed(2).replace(".", ",")}</span> por</p>
-                                        <p className={stylesCard.parcelas}><span>R$</span> {produto.installmentPrice.toFixed(2).replace(".", ",")}</p>
-                                        <p className={stylesCard.precoNovo}>ou R$ {produto.newPrice.toFixed(2).replace(".", ",")} à vista</p>
-                                       
+                            <div className={`${stylesCard.cardProdutos} ${stylesCard[className]} ${isUnico ? stylesCard.isUnico : ''}`} key={i}>
+
+                                <div className={stylesCard.cardContainer}>
+                                    <div className={stylesCard.ladoImagem}>
+                                        <h4>{produto.desc}</h4>
+                                        <img src={produto.imageUrl} alt={produto.name} />
+                                    </div>
+
+                                    <div className={stylesCard.ladoTexto}>
+                                        <h4>{produto.desc}</h4>
+                                        <img src={produto.imageUrl} alt={produto.name} />
+                                        <h3>{produto.name}</h3>
+                                        <div className={stylesCard.valores}>
+                                            <p>12x <br /> <span>sem juros de</span></p>
+                                            <div className={stylesCard.preco}>
+                                                <p className={stylesCard.precoAntigo}>de R$ <span>{produto.oldPrice.toFixed(2).replace(".", ",")}</span> por</p>
+                                                <p className={stylesCard.parcelas}><span>R$</span> {produto.installmentPrice.toFixed(2).replace(".", ",")}</p>
+                                                <p className={stylesCard.precoNovo}>ou R$ {produto.newPrice.toFixed(2).replace(".", ",")} à vista</p>
+                                            
+                                            </div>
+                                        </div>
+                                        <a href="#">Peça já</a>
+                                        <hr />
+                                        <ul>
+                                            {produto.items.map((item, index) => (
+                                                <li key={index}>{item}</li>
+                                            ))}
+                                        </ul>
+                                        <hr />
+                                        <a href="#" className={stylesCard.maisInformacoes}>Mais informações  
+                                            <Image src="/setaAmarela.svg" alt="dropdown" width={12} height={8} />
+                                        </a>
                                     </div>
                                 </div>
-                                <a href="#">Peça já</a>
+                                
+                               
+                                
                             </div>
                         );
                     })}
