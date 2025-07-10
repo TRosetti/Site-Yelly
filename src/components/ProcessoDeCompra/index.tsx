@@ -176,7 +176,7 @@ export function ProcessoDeCompra({ apenasProcessoDeCompra = false }: ProcessoDeC
                 </div>
 
                 <div className={stylesCard.products}>
-                    <Slider spaceBetween={16} >
+                    <Slider spaceBetween={16}  navigation={false}>
                     {Object.values(produtosDoPlano).map((produto, i) => {
                         const className = produto.name.toLowerCase().replace(/\s+/g, '-');
                         const isUnico = Object.values(produtosDoPlano).length == 1;

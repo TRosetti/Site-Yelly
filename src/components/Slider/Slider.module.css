@@ -1,27 +1,45 @@
-.sliderContainer {
+.sliderWrapper {
+  position: relative;
   width: 100%;
   max-width: 1440px;
   margin: auto;
-  
+}
+
+/* Aplica somente quando navigation for true */
+.withNavigation {
+  padding: 0 48px;
+}
+
+.sliderContainer {
+  width: 100%;
   overflow: hidden;
-  box-sizing: border-box;
 }
 
-.sliderContainer :global(.swiper) {
-  width: 100% !important;
-  max-width: 100%;
-  box-sizing: border-box;
+/* Botões externos */
+.navButton {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  width: 20px;
+  height: 20px;
+  background: #FFC700;
+  color: #000;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  
 }
 
-.sliderContainer :global(.swiper-wrapper) {
-  width: 100% !important;
-  max-width: 100%;
-  box-sizing: border-box;
+
+
+.prevButton {
+  left: 0;
 }
 
-.sliderContainer :global(.swiper-slide) {
-  min-width: 0;
-  box-sizing: border-box;
+.nextButton {
+  right: 0;
 }
-
-

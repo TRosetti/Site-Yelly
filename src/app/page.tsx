@@ -5,6 +5,7 @@ import { Bandeiras } from "@/components/Bandeiras";
 import { Beneficios } from "@/components/Beneficios";
 import { Rotulos } from "@/components/Rotulos"
 import { ProcessoDeCompra } from "@/components/ProcessoDeCompra";
+import { Depoimentos } from "@/components/Depoimentos";
 
 
 
@@ -45,8 +46,10 @@ export default function Home() {
       <Tarja />
      
       <ProcessoDeCompra /> {/* Se eu quiser sem o hero é só adicionar  <ProcessoDeCompra apenasProcessoDeCompra={true} /> */}
+      <Tarja />
 
-    
+      <Depoimentos />
+        
     </div>  
   );
 }
