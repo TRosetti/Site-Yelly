@@ -38,8 +38,10 @@
 .products{
     max-width: 1440px;
     width: 100%;
-    
+    cursor: grab;
     .cardProdutos{
+
+
 
         border: 2px solid #FFFFFF33;
         border-radius: 8px;
@@ -49,12 +51,108 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
+        gap: 16px;
 
 
-        h3,span{
+       
+        h3,h4, p{
+            font-family: var(--roc-grotesk);
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        h3{
+            color: #FFFF00;
+            font-size: 28px;
+            line-height: 32px;
+            font-family: var(--roc-grotesk-condensed);
+        }
+        h4{
+            font-size: 32px;
+            line-height: 48px;
+            padding: 4px;
+            border-radius: 8px;
             color: #fff;
         }
+        img{
+            max-width: 256px;
+            width: 100%;
+        }
+        .valores{
+            display: flex;
+            flex-direction: row;
+            align-items: end;
+            gap: 16px;
+           
+            font-family: var(--font-poppins);
+
+            p{
+                font-size: 28px;
+                line-height: 16px ;
+                font-family: var(--roc-grotesk);
+                text-transform: none;
+                
+                span{
+                    font-size: 14px;
+                    font-family: var(--font-poppins);
+                    font-weight: 400;
+                }
+            }
+
+            .preco{
+                
+                .precoAntigo{
+                    font-size: 14px;
+                    line-height: 16px;
+                    font-weight: 500;
+                    span{
+                        text-decoration: line-through
+                    }
+                }
+                .parcelas{
+                    font-size: 48px;
+                    line-height: 48px;
+                    font-weight: 800;
+                    font-family: var(--font-poppins);
+                    span{
+                        
+                        font-size: 32px;
+                        line-height: 48px;
+                        font-weight: 800;
+                    }
+                }
+                .precoNovo{
+                   
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 16px;
+                }
+               
+            }
+            
+        }
+
+        a{
+            color: #1a1a1a;
+            background-color: #FFC700;
+            width: 90%;
+            padding: 4px ;
+            font-size: 20px;
+            line-height: 32px;
+            font-weight: 500;
+            border-radius: 100px;
+        }
+        a:hover{
+            background-color: #D19100;
+        }
         
+        &.yelly-minizinha{
+            border: 2px solid #FFFF00BF;
+
+            & > h4{
+                background-color: #FFFF00;
+                color: #1a1a1a;
+            }
+        }
 
         
     }

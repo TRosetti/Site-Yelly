@@ -176,12 +176,26 @@ export function ProcessoDeCompra({ apenasProcessoDeCompra = false }: ProcessoDeC
 
                 <div className={stylesCard.products}>
                     <Slider  >
-                        {Object.values(produtosDoPlano).map((produto, i) => (
-                            <div className={stylesCard.cardProdutos} key={i} >
-                                <span>{produto.desc}</span>
+                    {Object.values(produtosDoPlano).map((produto, i) => {
+                        const className = produto.name.toLowerCase().replace(/\s+/g, '-');
+                        return (
+                            <div className={`${stylesCard.cardProdutos} ${stylesCard[className]}`} key={i}>
+                                <h4>{produto.desc}</h4>
+                                <img src={produto.imageUrl} alt={produto.name} />
                                 <h3>{produto.name}</h3>
+                                <div className={stylesCard.valores}>
+                                    <p>12x <br /> <span>sem juros de</span></p>
+                                    <div className={stylesCard.preco}>
+                                        <p className={stylesCard.precoAntigo}>de R$ <span>{produto.oldPrice.toFixed(2).replace(".", ",")}</span> por</p>
+                                        <p className={stylesCard.parcelas}><span>R$</span> {produto.installmentPrice.toFixed(2).replace(".", ",")}</p>
+                                        <p className={stylesCard.precoNovo}>ou R$ {produto.newPrice.toFixed(2).replace(".", ",")} à vista</p>
+                                       
+                                    </div>
+                                </div>
+                                <a href="#">Peça já</a>
                             </div>
-                        ))}
+                        );
+                    })}
                     </Slider>
                 </div>
             </div>

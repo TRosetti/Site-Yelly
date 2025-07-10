@@ -35,7 +35,7 @@ export function Slider({
       slidesPerView: 2.1,
     },
     0: {
-      slidesPerView: 1.2,
+      slidesPerView: 1.1,
     },
   },
   slidesPerView = 1.2,
