@@ -1,24 +1,43 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f5f5f5;
+  --foreground: #1a1a1a;
   --roc-grotesk: "roc-grotesk", sans-serif;
   --roc-grotesk-compressed: "roc-grotesk-compressed", sans-serif;
   --roc-grotesk-condensed: "roc-grotesk-condensed", sans-serif;
   --roc-grotesk-wide: "roc-grotesk-wide", sans-serif;
   --roc-grotesk-extrawide: "roc-grotesk-extrawide", sans-serif;
+
+  --desktop: 1440px;  
+  --largeScreen: 1080px;
+  --mediunScreen: 850px;
+  --mobile: 680px;
+  
+  --amarelo-yelly: #FFC700;
+  --hover-amarelo-yelly: #D19100;
+  --amarelo-calro: #FFFF00;
+  --hover-amarelo-claro: #E5E500;
+  --branco: #fff;
+  --bg-preto: #1a1a1a;
+  --bg-branco: #f5f5f5;
+  --color-preto: #1a1a1a;
+  --color-branco: #f5f5f5;
+  --business1: #F9610D;
+  --hover-business1: #9A3904;
+  --business2: #17222D;
+  --business3: #2E5EE5;
+  --hover-business3: #2A55A6;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 
 body {
-  /* color: var(--foreground);
-  background: var(--background); */
+  
   font-family: var(--font-poppins), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -28,7 +47,7 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  color: #1a1a1a;
+  color: var(--color-preto);
 }
 
 a {
@@ -47,6 +66,6 @@ a {
   line-height: 16px;
   font-weight: 500;
   color: #1a1a1a;
-  background-color: #FFC700;
+  background-color: var(--amarelo-yelly);
 
 }

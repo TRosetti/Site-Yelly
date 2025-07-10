@@ -1,12 +1,12 @@
 .processoDeCompra {
-    background-color: #1a1a1a;
+    background-color: var(--bg-preto);
     
    
     
 
     
     h2, p,li{
-        color: #fff;
+        color: var(--branco);
     }
 
     .container {
@@ -28,7 +28,7 @@
                 content: "";
                 width: 100%;
                 height: 100%;
-                background: linear-gradient(transparent 70%, #1a1a19 );
+                background: linear-gradient(transparent 70%, var(--bg-preto) );
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -159,7 +159,7 @@
                     content: "";
                     width: 100%;
                     height: 100%;
-                    background: linear-gradient(transparent 90%, #1a1a19 );
+                    background: linear-gradient(transparent 90%, var(--bg-preto) );
                     position: absolute;
                     top: 0;
                     left: 0;

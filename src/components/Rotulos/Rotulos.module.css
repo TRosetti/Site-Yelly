@@ -1,6 +1,6 @@
 .Rotulos{
     width: 100%;
-    background-color: #FFF;
+    background-color: var(--branco);
 }
 
 .rotulosContainer{

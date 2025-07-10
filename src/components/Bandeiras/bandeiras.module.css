@@ -1,10 +1,17 @@
 .bandeiras{
-    max-width: 1440px;
-    width: 70%;
-    padding: 32px 70px;
-    background-color: #fff;
-    margin: auto;
-    position: relative;
+    
+  
+   width: 100%;
+    background-color: var(--branco);
+    
+
+    .bandeirasContainer{
+        max-width: 1440px;
+        width: 70%;
+        padding: 32px 70px;
+        margin: auto;
+        position: relative;
+    }
     
     .imageContainer{
        width: 100%; /* usa a largura total do container */
@@ -32,12 +39,12 @@
 
     .imageContainer::before {
         left: 70px;
-        background: linear-gradient(to right, #fff 0%, transparent 100%);
+        background: linear-gradient(to right, var(--branco) 0%, transparent 100%);
     }
 
     .imageContainer::after {
         right: 70px;
-        background: linear-gradient(to left, #fff 0%, transparent 100%);
+        background: linear-gradient(to left, var(--branco) 0%, transparent 100%);
     }
     
 }
@@ -51,9 +58,13 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 680px) {
     .bandeiras{
-        padding: 32px 16px;
+
+        .bandeirasContainer{
+            padding: 32px 16px;
+        }
+        
 
         .imageContainer::before {
             left: 10px;

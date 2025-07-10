@@ -1,6 +1,6 @@
 .header{
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-    background-color: #fff;
+    background-color: var(--branco);
 }
 
 
@@ -50,7 +50,7 @@
         ul.submenu{
             position: absolute;
             top: 100%;
-            background-color: #fff;
+            background-color: var(--branco);
             z-index: 1;
             box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
             gap: 0;
@@ -59,7 +59,7 @@
             display: none;
         }
         ul.submenu li{
-            background-color: #fff;
+            background-color: var(--branco);
         }
         
         ul.submenu li a{
@@ -68,8 +68,8 @@
             padding: 16px;
         }
         ul.submenu li:hover{
-            background-color: #1a1a1a;
-            color: #fff;
+            background-color: var(--bg-preto);
+            color: var(--branco);
         }
         
 
@@ -89,7 +89,7 @@
             font-size: 16px;
             line-height: 16px;
             padding: 8px 24px;
-            background-color: #FFFF00;
+            background-color: var(--amarelo-calro);
             border-radius: 100px;
         }
 
@@ -102,7 +102,7 @@
         }
 
         .btn1:hover, .btn2:hover{
-            background-color: #E5E500;
+            background-color: var(--hover-amarelo-claro);
         }
         .cart{
             
@@ -134,7 +134,7 @@
             width: 20%;
 
             img{
-                background-color: #f5f5f5;
+                background-color: var(--bg-branco);
             }
            
         }
@@ -228,21 +228,21 @@
 
                 .btn1{
                     font-weight: 700;
-                    background-color: #FFC700;
+                    background-color: var(--amarelo-yelly);
                     border-radius: 100px;
                     padding: 8px 48px;
                 }
                 .btn2{
                     font-weight: 500;
-                    border: 1px solid #1a1a1a;
+                    border: 1px solid var(--color-preto);
                     border-radius: 100px;
                     padding: 8px 48px;
                 }
             }
 
             a:active{
-                background-color: #1a1a1a;
-                color: #fff
+                background-color: var(--bg-preto);
+                color: var(--branco)
             }
             
             

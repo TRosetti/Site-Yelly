@@ -1,6 +1,6 @@
 .hero{
     width: 100%;
-    background-color: #f5f5f5;
+
 }
 .heroContainer{
     max-width: 1440px;
@@ -41,7 +41,7 @@
             font-size: 20px;
             line-height: 32px;
             font-weight: 700;
-            color: #ffc700;
+            color: var(--amarelo-yelly);
             letter-spacing: 5px;
         }
         p{
@@ -51,7 +51,7 @@
         }
         a{
             color: #1a1a1a;
-            background-color: #ffc700;
+            background-color: var(--amarelo-yelly);
             font-size: 24px;
             line-height: 32px;
             letter-spacing: -0.2px;
@@ -60,6 +60,9 @@
             padding: 8px 64px;
             border-radius: 100px;
             align-self: flex-start;  /* Estava com largura do pai, mas queria que ficasse com a largura dele msm */
+        }
+        a:hover{
+            background-color: var(--hover-amarelo-yelly);
         }
     }
 

@@ -1,6 +1,6 @@
 'use client'
 
-import { Swiper, SwiperSlide } from 'swiper/react'
+import { Swiper , SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
@@ -39,6 +39,7 @@ export function Slider({
   const prevRef = useRef<HTMLDivElement>(null)
   const nextRef = useRef<HTMLDivElement>(null)
 
+  
   return (
     <div className={`${styles.sliderWrapper} ${navigation ? styles.withNavigation : ''}`}>
       {navigation && (
@@ -60,6 +61,7 @@ export function Slider({
         <Swiper
           key={children.length}
           modules={[Navigation]}
+  
           navigation={
             navigation
               ? {

@@ -6,12 +6,12 @@ import { Beneficios } from "@/components/Beneficios";
 import { Rotulos } from "@/components/Rotulos"
 import { ProcessoDeCompra } from "@/components/ProcessoDeCompra";
 import { Depoimentos } from "@/components/Depoimentos";
-
+import styles from './page.module.css'
 
 
 export default function Home() {
   return (
-    <div>
+    <div className={styles.app}>
       <Tarja />
       <Header />
       <Hero 

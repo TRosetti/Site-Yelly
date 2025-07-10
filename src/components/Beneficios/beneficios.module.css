@@ -1,5 +1,7 @@
+
+
 .beneficios{
-    background-color: #f5f5f5;
+    background-color: var(--bg-branco);
 }
 
 .containerBeneficios{
@@ -91,7 +93,7 @@
                 line-height: 16px;
                 font-weight: 500;
                 padding: 8px 32px;
-                background-color: #ffc700;
+                background-color: var(--amarelo-yelly);
                 border-radius: 100px;
             }
             

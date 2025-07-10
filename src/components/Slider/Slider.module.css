@@ -22,8 +22,7 @@
   z-index: 10;
   width: 20px;
   height: 20px;
-  background: #FFC700;
-  color: #000;
+  background: var(--amarelo-yelly);
   font-size: 24px;
   display: flex;
   align-items: center;
@@ -32,6 +31,9 @@
   transform: translateY(-50%);
   cursor: pointer;
   
+}
+.navButton:hover{
+  background-color: var(--hover-amarelo-yelly);
 }
 
 

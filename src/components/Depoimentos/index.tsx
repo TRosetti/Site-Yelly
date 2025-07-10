@@ -26,6 +26,14 @@ export function Depoimentos(){
                     <Slider 
                         spaceBetween={16}
                         navigation={true}
+                        breakpoints={{
+                            1320: { slidesPerView: 3 },
+                            1100: { slidesPerView: 2.5 },
+                            1080: { slidesPerView: 2 },
+                            850: { slidesPerView: 1.5 },
+                            680: { slidesPerView: 1 },
+                            0: { slidesPerView: 1 },
+                        }}
                     >
                     
                     {depoimentosList.map((item, i) => {
