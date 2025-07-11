@@ -16,27 +16,46 @@
 
 }
 .card1 { 
-
+    text-align: center;
     height: 576px;
+    padding: 64px;
+    h2{
+        font-size: 32px;
+        line-height: 32px;
+        font-weight: 700;
+    }
+    a{
+        justify-content: center;
+    }
 }
 .card2, .card3, .card4, .card5, .card6 { 
     height: 416px;
+    padding: 32px;
+}
+.card1{
+    background: url("/Cards/taxas-exclusivas.png");
 }
 .card2{
+    background: url("/Cards/recebimento-rapido.png");
     max-width: 543.5px;
 }
 .card3{
+    background: url("/Cards/alta-performace.png");
     max-width: 724.5px;
 }
-.card4, .card6 { 
+.card4{ 
+    background: url("/Cards/SeloRA1000.png");
     max-width: 348px;
 }
 .card5{ 
+    background: url("/Cards/redes-sociais.png");
     max-width: 540px;
 }
 .card6 { 
+    background: url("/Cards/link-de-pagamento.png");
     max-width: 348px;
 }
+
 
 .card {
     width: 100%;
@@ -44,10 +63,32 @@
     background-size: cover !important;
     background-position: center !important;
     overflow: hidden;
-    padding: 24px;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    h3{
+        font-size: 16px;
+        line-height: 16px;
+        font-weight: 400;
+        letter-spacing: 5.6px;
+        text-transform: uppercase;
+        color: #ccc;
+    }
+    h2{
+        font-size: 24px;
+        line-height: 28px;
+        font-weight: 600;
+        letter-spacing: -0.2px;
+    }
+    a{
+        font-size: 20px;
+        line-height: 32px;
+        font-weight: 400;
+    }
 }
 
-.card h2,.card h3{
+.card h2{
     color: var(--branco);
 }
 .card a {
@@ -62,4 +103,114 @@
 
 .card a:hover {
     color: var(--hover-amarelo-claro);
+}
+
+@media (max-width: 1080px){
+    .cardContainer {
+        padding: 96px 32px;
+    }
+
+    .card {
+        
+        h3{
+            font-size: 16px;
+            line-height: 16px;
+
+            letter-spacing: 5.6px;
+
+        }
+        h2{
+            font-size: 18px;
+            line-height: 28px;
+        }
+        a{
+            font-size: 20px;
+            line-height: 32px;
+
+        }
+    }
+
+}
+
+@media (max-width: 850px){
+    
+    .linha1, .linha2, .linha3{
+        flex-direction: column;
+
+    }
+    
+    .card1, .card2, .card3, .card4, .card5, .card6 { 
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 680px){
+    .cardContainer {
+        padding: 32px 16px;
+        gap: 16px;
+    }
+
+
+    .linha1, .linha2, .linha3{
+        gap: 16px;
+    }
+    .card1 { 
+        text-align: left;
+        
+        a{
+            justify-content: left;
+        }
+    }
+    .card {
+        
+        h3{
+            font-size: 8px;
+            line-height: 8px;
+
+            letter-spacing: 5.6px;
+
+        }
+        h2{
+            font-size: 16px;
+            line-height: 16px;
+        }
+        a{
+            font-size: 12px;
+            line-height: 16px;
+
+            img{
+                width: 12px;
+            }
+
+        }
+
+    }
+    .card1, .card2, .card3, .card4, .card5, .card6 { 
+        padding: 16px;
+    }
+    .card1{
+        background: url("/Cards/taxas-exclusivas-mobile.png");
+    }
+    .card2{
+        background: url("/Cards/recebimento-rapido-mobile.png");
+    }
+    .card3{
+        background: url("/Cards/alta-performace-mobile.png");
+    }
+    .card4{ 
+        background: url("/Cards/SeloRA1000-mobile.png");
+    }
+    .card5{ 
+        background: url("/Cards/redes-sociais-mobile.png");
+    }
+    .card6 { 
+        background: url("/Cards/link-de-pagamento-mobile.png");
+    }
+    .card1, .card2, .card3, .card4, .card5, .card6 { 
+        height: 160px;
+        background-position: top left !important;
+        background-size: contain;
+        
+    }
+
 }
