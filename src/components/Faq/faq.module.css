@@ -47,7 +47,7 @@
         cursor: pointer;
     }
     p{
-        border: 1px solid var(--bg-branco);
+        border-top: 1px solid var(--bg-branco);
         padding: 8px 32px;
         background-color: var(--branco);
         border-radius: 0 0 4px 4px;
