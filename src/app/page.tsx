@@ -7,6 +7,7 @@ import { Beneficios2 } from "@/components/Beneficios2";
 import { Rotulos } from "@/components/Rotulos"
 import { ProcessoDeCompra } from "@/components/ProcessoDeCompra";
 import { Depoimentos } from "@/components/Depoimentos";
+import { Cards } from "@/components/Cards"
 import styles from './page.module.css'
 
 
@@ -52,6 +53,7 @@ export default function Home() {
       <Depoimentos />
       <Beneficios2 />
       <Tarja />
+      <Cards />
         
     </div>  
   );

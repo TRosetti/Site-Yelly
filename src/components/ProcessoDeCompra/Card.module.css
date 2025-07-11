@@ -101,7 +101,7 @@
             text-transform: uppercase;
         }
         h3{
-            color: var(--amarelo-calro);
+            color: var(--amarelo-claro);
             font-size: 28px;
             line-height: 32px;
             font-family: var(--roc-grotesk-condensed);
@@ -189,7 +189,7 @@
             border: 2px solid #FFFF00BF;
 
             & > h4{
-                background-color: var(--amarelo-calro);
+                background-color: var(--amarelo-claro);
                 color: #1a1a1a;
             }
         }
@@ -215,7 +215,7 @@
 
                 
         li:nth-child(-n+2){
-            color: var(--amarelo-calro);
+            color: var(--amarelo-claro);
             font-weight: 600;
         }
 
@@ -382,7 +382,7 @@
             .bolinhaSelecionada {
                 width: 12px;
                 height: 12px;
-                background: var(--amarelo-calro);
+                background: var(--amarelo-claro);
                 border-radius: 50%;
             }
         }
@@ -396,7 +396,7 @@
         .destaque{
             font-size: 20px;
             line-height: 32px;
-            color: var(--amarelo-calro);
+            color: var(--amarelo-claro);
         }
 
 
@@ -598,7 +598,7 @@
             .destaque{
                 font-size: 20px;
                 line-height: 32px;
-                color: var(--amarelo-calro);
+                color: var(--amarelo-claro);
             }
 
         }
