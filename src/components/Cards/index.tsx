@@ -50,7 +50,7 @@ export function Cards(){
                             <img src="/setaAmarela2.svg" alt="Seta" />
                         </a>
                     </div>
-                    <div className={`${styles.card} ${styles.card5}`} style={{background: "url('/Cards/link-de-pagamento.png')"}}>
+                    <div className={`${styles.card} ${styles.card6}`} style={{background: "url('/Cards/link-de-pagamento.png')"}}>
                         <h3>link de pagamento</h3>
                         <h2>Novidade na Yelly!</h2>
                         <a href="#">
