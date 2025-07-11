@@ -95,6 +95,23 @@ section.depoimentos {
     padding: 0;
     
   }
+  .linkButton{
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 500;
+    color: #1a1a1a;
+    background-color: var(--amarelo-yelly);
+    border-radius: 100px;
+    text-align: center;
+    padding: 8px 64px;
+  }
+
+  .linkButton:hover{
+  
+    background-color: var(--hover-amarelo-yelly);
+    
+  }
+
 }
 
 
@@ -103,5 +120,9 @@ section.depoimentos {
 
   .depoimentosContainer{
     padding: 32px 16px;
+
+    .linkButton{
+      padding: 8px 24px;
+    }
   }
 }

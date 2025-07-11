@@ -3,6 +3,7 @@ import { Tarja } from "@/components/Tarja";
 import { Hero } from "@/components/Hero";
 import { Bandeiras } from "@/components/Bandeiras";
 import { Beneficios } from "@/components/Beneficios";
+import { Beneficios2 } from "@/components/Beneficios2";
 import { Rotulos } from "@/components/Rotulos"
 import { ProcessoDeCompra } from "@/components/ProcessoDeCompra";
 import { Depoimentos } from "@/components/Depoimentos";
@@ -49,6 +50,8 @@ export default function Home() {
       <Tarja />
 
       <Depoimentos />
+      <Beneficios2 />
+      <Tarja />
         
     </div>  
   );

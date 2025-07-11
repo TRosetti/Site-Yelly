@@ -45,3 +45,12 @@
 .nextButton {
   right: 0;
 }
+
+
+@media (max-width: 680px){
+
+  .withNavigation {
+    padding: 0 30px;
+  }
+
+}

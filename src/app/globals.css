@@ -68,6 +68,7 @@ a {
   color: #1a1a1a;
   background-color: var(--amarelo-yelly);
   border-radius: 100px;
+  text-align: center;
 }
 
 .linkButton:hover{
@@ -75,3 +76,4 @@ a {
   background-color: var(--hover-amarelo-yelly);
   
 }
+
