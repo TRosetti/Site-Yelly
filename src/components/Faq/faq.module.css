@@ -1,0 +1,133 @@
+.faqContainer{
+    max-width: 1440px;
+    width: 100%;
+    padding: 96px 108px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 32px;
+
+    h2{
+        font-size: 64px;
+        line-height: 64px;
+        font-weight: 400;
+    }
+
+    .mobile{
+        display: none;
+    }
+}
+
+
+
+.faq{
+    max-width: 684px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    h3{
+        background-color: var(--branco);
+        padding: 8px 32px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 16px;
+        line-height: 24px;
+        border-radius: 4px;
+        font-weight: 600;
+
+        img{
+            transform: rotate(-90deg);
+            /* height: 15px; */
+        }
+        cursor: pointer;
+    }
+    p{
+        border: 1px solid var(--bg-branco);
+        padding: 8px 32px;
+        background-color: var(--branco);
+        border-radius: 0 0 4px 4px;
+        display: none;
+    }
+
+    .aberto {
+        border-radius: 4px 4px 0 0 ;
+        img{
+            transform: rotate(0deg);
+        };
+
+       
+    }
+    .aberto + p{  /* Pega o p ao lado do .aberto */
+        display: block;
+    }
+   
+}
+
+
+@media (max-width: 1080px){
+    .faqContainer{
+        padding: 96px 64px;
+        h2{
+            font-size: 56px;
+        }
+    }
+}
+
+@media (max-width: 850px){
+    .faqContainer{
+       
+        flex-direction: column;
+        align-items: center;
+        h2{
+            font-size: 45px;
+            text-align: center;
+            
+        }
+        .desktop{
+            display: none;
+        }
+        .mobile{
+            display: block;
+        }
+    }
+}
+
+
+@media (max-width: 680px){
+    .faqContainer{
+       padding: 32px 16px;
+
+        h2{
+            font-size: 22px;
+            line-height: 28px;
+            text-align: center;
+            
+        }
+
+        .faq{
+            
+            h3{
+                padding: 8px 16px;
+                font-size: 14px;
+                line-height: 16px;
+            }
+            p{
+                padding: 8px 16px;
+                font-size: 12px;
+                line-height: 16px;
+            }
+        }
+        .desktop{
+            display: none;
+        }
+        .mobile{
+            display: block;
+        }
+    }
+}
+

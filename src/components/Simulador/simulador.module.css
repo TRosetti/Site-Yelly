@@ -1,0 +1,9 @@
+.simuladorContainer{
+    max-width: 1440px;
+    width: 100%;
+    padding: 64px 70px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}

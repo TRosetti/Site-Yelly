@@ -8,6 +8,7 @@ import { Rotulos } from "@/components/Rotulos"
 import { ProcessoDeCompra } from "@/components/ProcessoDeCompra";
 import { Depoimentos } from "@/components/Depoimentos";
 import { Cards } from "@/components/Cards"
+import { Faq } from "@/components/Faq";
 import styles from './page.module.css'
 
 
@@ -54,7 +55,7 @@ export default function Home() {
       <Beneficios2 />
       <Tarja />
       <Cards />
-        
+      <Faq />
     </div>  
   );
 }
