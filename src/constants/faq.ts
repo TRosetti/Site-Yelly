@@ -12,7 +12,7 @@ export const Faqjson   = {
         },
         faq3:{
             pergunta: "As taxas são promocionais?",
-            resposta: "Não. Somos transparentes: /nNossas taxas não têm prazos específico ou limite de faturamento."            
+            resposta: "Não. Somos transparentes: \nNossas taxas não têm prazos específico ou limite de faturamento."            
         },
         faq4:{                        
             pergunta: "As taxas podem ser alteradas?",
@@ -44,7 +44,7 @@ export const Faqjson   = {
         },
         faq11:{
             pergunta: "Quanto o prazo de entrega das máquinas?",
-            resposta: "Os prazos de entrega são: /nSudeste, Sul e Centro-Oeste: 2-15 dias úteis /nNordeste e Norte: 5-20 dias úteis /nPara agilizar seu pedido, faça o cadastro e envie os documentos com o auxílio da nossa equipe pós-venda logo após a solicitação da maquininha."           
+            resposta: "Os prazos de entrega são: \nSudeste, Sul e Centro-Oeste: 2-15 dias úteis \nNordeste e Norte: 5-20 dias úteis \nPara agilizar seu pedido, faça o cadastro e envie os documentos com o auxílio da nossa equipe pós-venda logo após a solicitação da maquininha."           
         },
         faq12:{
             pergunta: "Aceitam voucher de alimentação?",

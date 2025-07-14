@@ -9,6 +9,7 @@ import { ProcessoDeCompra } from "@/components/ProcessoDeCompra";
 import { Depoimentos } from "@/components/Depoimentos";
 import { Cards } from "@/components/Cards"
 import { Faq } from "@/components/Faq";
+import { Banner } from "@/components/Banner";
 import styles from './page.module.css'
 
 
@@ -56,6 +57,7 @@ export default function Home() {
       <Tarja />
       <Cards />
       <Faq />
+      <Banner />
     </div>  
   );
 }

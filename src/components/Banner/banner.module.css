@@ -1,0 +1,121 @@
+
+
+.bannerContainer{
+    max-width: 1440px;
+    width: 100%;
+    margin: auto;
+    padding: 64px 70px;
+    
+    
+    .banner{
+        background:linear-gradient(#141414, #333333) ;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 64px;
+        gap: 64px;
+        border-radius: 16px;
+    }
+
+    .text{
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+    
+    h2{
+        color: var(--branco);  
+        font-weight: 300;
+        font-size: 48px;
+        line-height: 48px;
+        letter-spacing: -0.96px;
+        text-align: center;
+        span{
+            color: var(--amarelo-yelly);
+            font-weight: 600;
+        }
+    }
+    p{
+        color: var(--branco);
+        text-align: center;
+        font-size: 16px;
+        line-height: 16px;
+        font-weight: 500;
+        letter-spacing: 2.4px;
+    }
+
+    h4{
+        text-align: center;
+        color: var(--branco);
+        font-size: 112px;
+        line-height: 128px;
+        font-weight: 750;
+        font-family: var(--roc-grotesk-extrawide);
+    }
+    a{
+        text-align: center;
+        background-color: var(--amarelo-yelly);
+        align-self: center;
+        font-size: 16px;
+        line-height: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        padding: 8px 32px;
+        border-radius: 100px;
+    }
+
+}
+
+@media (max-width: 1300px) {
+    
+    .bannerContainer{
+       h2{
+        font-size: 40px;
+       }
+
+       h4{
+        font-size: 80px;
+       }
+    }
+}
+
+@media (max-width: 1080px) {
+    
+    .bannerContainer{
+       .banner{
+        flex-direction: column-reverse;
+       }
+    }
+}
+
+@media (max-width: 850px) {
+    
+    .bannerContainer{
+        padding: 32px;
+        .banner{
+            padding: 32px;
+            gap:32px;
+        }
+    }
+}
+
+@media (max-width: 680px) {
+    
+    .bannerContainer{
+        padding: 32px 16px;
+
+        h2{
+            font-size: 25px;
+            line-height: 32px;
+        }
+
+        h4{
+            font-size: 50px;
+            line-height: 64px;
+        }
+        a{
+            line-height: 18px;
+        }
+    }
+}

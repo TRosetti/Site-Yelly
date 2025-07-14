@@ -10,7 +10,7 @@ export function Faq(){
     const faqJson = Object.values(Faqjson.faq);
 
     const togglePergunta = (index: number) => {
-        setIsAberto(prev => (prev === index ? null : index));
+        setIsAberto(isAberto === index ? null : index);
     };
 
     return(
@@ -27,7 +27,8 @@ export function Faq(){
                                 {item.pergunta}
                                 <img src="/dropdownNav.svg" alt="dropdown" />
                             </h3>
-                            <p >{item.resposta}</p>
+                            <p style={{ whiteSpace: 'pre-line' }}>{item.resposta}</p>
+                            {/* Esse {whiteSpace; 'pre-line'} serve para pular a linha quando tem \n */}
                         </div>
                     ))}
                 </div>
