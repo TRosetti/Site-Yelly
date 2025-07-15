@@ -10,6 +10,7 @@ import { Depoimentos } from "@/components/Depoimentos";
 import { Cards } from "@/components/Cards"
 import { Faq } from "@/components/Faq";
 import { Banner } from "@/components/Banner";
+import { Footer } from "@/components/Footer";
 import styles from './page.module.css'
 
 
@@ -58,6 +59,7 @@ export default function Home() {
       <Cards />
       <Faq />
       <Banner />
+      <Footer />
     </div>  
   );
 }

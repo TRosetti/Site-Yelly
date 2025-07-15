@@ -1,0 +1,268 @@
+.footerContainer{
+    max-width: 1440px;
+    width: 100%;
+    padding: 64px 70px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+
+    &> p{
+        text-align: center;
+         font-size: 16px;
+        line-height: 32px;
+        font-weight: 400;
+        letter-spacing: -0.32px;
+    }
+
+    
+}
+
+.topo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+   
+
+    .socialMediaContianer{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 32px;
+
+        .socialMedia{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            gap: 32px; 
+            
+            a{
+                line-height: 0;
+            }
+        }
+        .app{
+            display: flex;
+            flex-direction: row;
+            gap: 16px;
+            a{
+                line-height: 0;
+            }
+        }
+
+    }
+}
+
+.paginas{
+    display: flex;
+    flex-direction: row;
+    gap: 64px;
+    
+    
+    
+    .sobreNos {
+        max-width: 279px;
+        width: 100%;
+        a{
+            font-size: 16px;
+            line-height: 32px;
+            font-weight: 600;
+        }
+        p{
+            font-size: 12px;
+            line-height: 16px;
+            letter-spacing: -0.32px;
+            color: #1A1A1ABF;
+        }
+
+        .raMobile{
+            display: none;
+        }
+    }
+
+    .outrasPaginas{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+         gap: 32px;
+        width: 100%;
+
+        h3,a{
+            font-size: 16px;
+            line-height: 32px;
+            font-weight: 600;
+            letter-spacing: -0.32px;
+        }
+        a{
+            font-weight: 400;
+        }
+
+        div{
+            max-width: 160px;
+            width: 100%;
+            hr{
+                width: 100%;
+                height: 1px;
+                background-color: #1a1a1a40;
+                border: none;
+            }
+            a{
+                display: block;
+            }
+        }
+        .ra{
+            max-width: 125px;
+        }
+    }
+}
+
+@media (max-width: 1080px){
+    .paginas {
+        /* flex-direction: column; */
+
+        .sobreNos{
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+
+            .raMobile{
+                display: flex;
+                flex-direction: row;
+                gap: 32px;
+
+                
+                a{
+                    display: flex;
+                    align-items: center;
+                    /* justify-content: center; */
+                }
+                
+            }
+        }
+
+        .outrasPaginas{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            .ra{
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 850px){
+
+    .footerContainer{
+        padding: 32px;
+    }
+
+    .topo{
+
+        
+        gap: 16px;
+        flex-direction: column;
+
+
+        & > img{
+            width: 142px;
+        }
+        .socialMediaContianer{
+            flex-direction: column;
+            gap: 16px;
+
+        }
+    }
+    .paginas {
+        flex-direction: row;
+        
+        .sobreNos{
+       
+
+            .raMobile{
+                
+                flex-direction: column;
+                gap: 16px;
+                
+                a{
+                    display: flex;
+                    align-items: center;
+                    /* justify-content: center; */
+                }
+                
+            }
+        }
+        
+        
+        
+        .outrasPaginas{
+          
+
+           .ra{
+            display: none;
+           }
+        }
+    }
+}
+
+
+@media (max-width: 680px){
+    .footerContainer{
+        padding: 32px 16px;
+        gap: 16px;
+
+         &> p{
+            
+            font-size: 14px;
+            line-height: 16px;
+      
+        }
+
+    }
+   
+    .paginas {
+        flex-direction: column;
+        gap: 16px;
+        
+        .sobreNos{
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 16px;
+            max-width: 100%;
+
+           
+
+            .raMobile{
+                display: flex;
+                flex-direction: row;
+                gap: 32px;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+                
+                a{
+                    display: flex;
+                    align-items: center;
+                    /* justify-content: center; */
+                }
+            
+            }
+        }
+        
+      
+        
+        .outrasPaginas{
+          
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            & div{
+                max-width: 100%;
+            }
+          
+        }
+    }
+}
