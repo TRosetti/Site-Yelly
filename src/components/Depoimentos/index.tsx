@@ -62,7 +62,7 @@ export function Depoimentos(){
                     
                     </Slider>
 
-                <a href="#" className={styles.linkButton}>Peça a sua máquina agora!</a>
+                <a href="#processoDeCompra" className={styles.linkButton}>Peça a sua máquina agora!</a>
             
                
             </div>

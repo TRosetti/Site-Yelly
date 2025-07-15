@@ -48,6 +48,7 @@
         }
 
         .dropdown{
+            cursor: default;
             img{
                 opacity: 0.5;
             }

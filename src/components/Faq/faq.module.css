@@ -66,6 +66,19 @@
         display: block;
     }
    
+    a{
+        font-size: 16px;
+        line-height: 16px;
+        font-weight: 500;
+        background-color: var(--amarelo-yelly);
+        padding: 8px 24px;
+        border-radius: 100px;
+        align-self: flex-start;
+        margin-top: 16px;
+    }
+    a:hover{
+        background-color: var(--hover-amarelo-yelly);
+    }
 }
 
 
@@ -93,6 +106,10 @@
         }
         .mobile{
             display: block;
+        }
+
+        a{
+            align-self: center;
         }
     }
 }

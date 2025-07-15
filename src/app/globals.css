@@ -34,13 +34,15 @@
     --foreground: #ededed;
   }
 } */
-
+html {
+  scroll-behavior: smooth;
+}
 
 body {
-  
   font-family: var(--font-poppins), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 * {

@@ -6,6 +6,7 @@ import { useTaxas } from '@/hooks/useTaxas';
 import { MaquinasYelly } from '@/constants/maquinas';
 import { Slider } from '../Slider';
 import { TipoPlano } from '@/types/taxas';
+import Link from 'next/link';
 import Image from 'next/image';
 
 // import { SliderTeste } from "@/components/SliderTeste";
@@ -106,7 +107,7 @@ export function ProcessoDeCompra({ apenasProcessoDeCompra = false }: ProcessoDeC
                                     <li>Tudo de forma simples, transparente e sem complicações.</li>
                                </ul>
                             </div>
-                            <a href="#">Saiba mais</a>
+                            <Link href="/cashback">Saiba mais</Link>                            
                         </div>
                         <div className={stylesHero.imgContainer2}>
                             <img src="https://yelly.com.br/wp-content/uploads/2025/04/Rectangle-160.png" alt="Cash Back" />
@@ -117,7 +118,7 @@ export function ProcessoDeCompra({ apenasProcessoDeCompra = false }: ProcessoDeC
 
             
             {/* Card */}
-            <div className={stylesCard.card}>
+            <div className={stylesCard.card} id='processoDeCompra'>
                 <h2>Escolha o <strong>Plano de Taxas</strong> e a <strong>Máquina</strong> para o seu negócio!</h2>
 
                 <div className={stylesCard.selecionarPlanoContainer}>
@@ -204,6 +205,7 @@ export function ProcessoDeCompra({ apenasProcessoDeCompra = false }: ProcessoDeC
                                             </div>
                                         </div>
                                         <a href="#">Peça já</a>
+                                        {/* <Link href=" ">Peça já</Link>  */}
                                         <hr />
                                         <ul>
                                             {produto.items.map((item, index) => (

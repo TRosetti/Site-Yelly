@@ -1,11 +1,15 @@
 import styles from './footer.module.css';
+import Link from 'next/link';
 
 export function Footer (){
     return(
         <section>
             <div className={styles.footerContainer}>
                 <div className={styles.topo}>
-                    <img src="/logoYelly.svg" alt="Logo Yelly" />
+                    <Link href="/">
+                        <img src="/logoYelly.svg" alt="Logo Yelly" />
+                    </Link>
+                   
                     <div className={styles.socialMediaContianer}>
                         <div className={styles.socialMedia}>
                             <a href="https://www.instagram.com/sejayelly/%20/" target='_blank'>
@@ -37,7 +41,7 @@ export function Footer (){
                 <div className={styles.paginas}>
                     <div className={styles.sobreNos}>
                         <div>
-                             <a href="#">Sobre nós</a>
+                            <Link href="/sobre-nos">Sobre nós</Link>                             
                             <p>A Yelly é uma fintech que facilita o acesso a soluções de pagamento para empreendedores e comerciantes de todo o Brasil. Nossa missão é simplificar transações, potencializar vendas e impulsionar negócios por meio de tecnologia acessível e atendimento transparente.</p>
                         </div>
                          <div className={styles.raMobile}>
@@ -53,28 +57,30 @@ export function Footer (){
                         <div>
                             <h3>Soluções</h3>
                             <hr />
-                            <a href="#">Maquininhas</a>
-                            <a href="#">Link de Pagamento</a>
-                            <a href="#">Planos e Taxas</a>
+                            <Link href="/maquininhas">Maquininhas</Link>
+                            <Link href="/link-de-pagamento">Link de Pagamento</Link>
+                            <Link href="/taxas">Planos e Taxas</Link>             
                         </div>
                         <div>
                             <h3>Parcerias</h3>
                             <hr />
-                            <a href="#">Seja um Afiliado</a>
-                            <a href="#">Yelly Business</a>
+                            <Link href="/afiliados">Afiliados</Link>  
+                            <Link href="/yelly-business">Yelly Business</Link>
                         </div>
                         <div>
                             <h3>Institucional</h3>
                             <hr />
-                            <a href="#">Central de Ajuda</a>
-                            <a href="#">Ouvidoria</a>
-                            <a href="#">Blog</a>
+                            <Link href="https://yellyhelpcenter.tawk.help/" target="_blank">Ajuda</Link>
+                            <Link href="/ouvidoria">Ouvidoria</Link> 
+                            <Link href="/blog">Blog</Link>
                         </div>
                         <div>
                             <h3>Transparência</h3>
                             <hr />
-                            <a href="#">Privacidade</a> 
-                            <a href="#">Termos de Uso</a>
+                            <Link href="https://drive.google.com/file/d/1fzc6OFtFClj67iMaplyBm3sbrAkqphM-/view" target="_blank">Privacidade</Link>
+                            
+                            <Link href="https://drive.google.com/file/d/1fuK3hBbZD9qt4_zmWHxSXU8jnRCbNI35/view" target="_blank">Termos de Uso</Link>
+                            
                         </div>
 
                         <div className={styles.ra}>

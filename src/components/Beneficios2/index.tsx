@@ -39,7 +39,7 @@ export function Beneficios2(){
 
                         
 
-                        <a href="#" className={styles.linkButton} >Aproveite o desconto!</a>
+                        <a href="#processoDeCompra" className={styles.linkButton} >Aproveite o desconto!</a>
                     </div>
                 </div>
 
@@ -74,7 +74,7 @@ export function Beneficios2(){
                             </div>
                              <p>Prêmio Reclame Aqui 2024, categoria Meios de pagamentos eletrônicos - Grandes Operações.</p>
                         </div>
-                        <a href="#" className={styles.linkButton} >Garanta a sua!</a>
+                        <a href="#processoDeCompra" className={styles.linkButton} >Garanta a sua!</a>
                     </div>
                 </div>
             </div>

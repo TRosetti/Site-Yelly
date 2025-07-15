@@ -48,7 +48,7 @@ export function Beneficios(){
                             </div>
                         </div>
 
-                        <a href="#" className={styles.linkButton} >Aproveite!</a>
+                        <a href="#processoDeCompra" className={styles.linkButton} >Aproveite!</a>
                     </div>
                 </div>
             </div>

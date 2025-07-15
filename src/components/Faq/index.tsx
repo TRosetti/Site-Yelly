@@ -31,6 +31,7 @@ export function Faq(){
                             {/* Esse {whiteSpace; 'pre-line'} serve para pular a linha quando tem \n */}
                         </div>
                     ))}
+                    <a href="https://api.whatsapp.com/send/?phone=5527996075780&text=Ol%C3%A1%21+Vim+pelo+site+e+desejo+atendimento.&type=phone_number&app_absent=0" target='_blank'>Fale com nossa equipe</a>
                 </div>
                 
             </div>

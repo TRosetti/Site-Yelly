@@ -2,6 +2,7 @@
 import Image from "next/image";
 import styles from "./header.module.css";
 import { useState } from "react";
+import Link from "next/link";
 
 
 
@@ -22,66 +23,86 @@ export function Header (){
             <div className={styles.headerContainer}>
                 <div className={styles.desktop}>
                     <div className={styles.logo}>
-                        <a href="#">
+                        <Link href="/">
                             <Image src="/logoYelly.svg" alt="Logo Yelly" width={102} height={32}  priority />
-                        </a>
-                    
+                        </Link>                    
                     </div>
                     <div className={styles.menu}>
                         <nav>
                             <ul>
                                 <li>
-                                    <a href="#">Maquininhas</a>
+                                    <Link href="/maquininhas">Maquininhas</Link>
                                 </li>
                                 <li className={styles.dropdown}>
-                                    <a href="#">
-                                        Soluções
-                                        &nbsp; {/* Adiciona espaço em branco */}
-                                        <Image src="/dropdownNav.svg" alt="dropdown" width={12} height={8} />
-                                    </a> 
+                                    
+                                    
+                                    Soluções
+                                    &nbsp; {/* Adiciona espaço em branco */}
+                                    <Image src="/dropdownNav.svg" alt="dropdown" width={12} height={8} />
+                                    
                                     <ul className={styles.submenu}>
-                                        <li><a href="#">Cashback</a></li>
-                                        <li><a href="#">Link de Pagamento</a></li>                                    
+                                        <li>
+                                            <Link href="/cashback">Cashback</Link>
+                                            
+                                        </li>
+                                        <li>
+                                            <Link href="/link-de-pagamento">Link de Pagamento</Link>
+                                            
+                                        </li>                                    
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="#">Planos e Taxas</a>
+                                    <Link href="/taxas">Planos e Taxas</Link>                                    
                                 </li>
                                 
                                 <li className={styles.dropdown}>
-                                    <a href="#">
+                                    
                                         Parcerias
                                         &nbsp; {/* Adiciona espaço em branco */}
                                         <Image src="/dropdownNav.svg" alt="dropdown" width={12} height={8} />
-                                </a>
+                                
                                 <ul className={styles.submenu}> 
-                                        <li><a href="#">Afiliados</a></li>
-                                        <li><a href="#">Yelly Business</a></li>
+
+                                        <li>
+                                            <Link href="/afiliados">Afiliados</Link>                                            
+                                        </li>
+                                        <li>
+                                            <Link href="/yelly-business">Yelly Business</Link>                                            
+                                        </li>
                                     </ul>
                                 </li>
                                 <li className={styles.dropdown}>
-                                    <a href="#">
+                                    
                                         Institucional
                                         &nbsp; {/* Adiciona espaço em branco */}
                                         <Image src="/dropdownNav.svg" alt="dropdown" width={12} height={8} />
-                                    </a>
+                                    
                                     <ul className={styles.submenu}>
-                                        <li><a href="#">Sobre Nós</a></li>
-                                        <li><a href="#">Blog</a> </li>
-                                        <li><a href="#">Ouvidoria</a></li>
-                                        <li><a href="#">Portal Yelly</a></li>
+                                        <li>
+                                            <Link href="/sobre-nos">Sobre Nós</Link>                                            
+                                        </li>
+                                        <li>
+                                            <Link href="/blog">Blog</Link>                                            
+                                        </li>
+                                        <li>
+                                            <Link href="/ouvidoria">Ouvidoria</Link>                                            
+                                        </li>
+                                        <li>
+                                            <Link href="https://conta.yelly.com.br/login" target="_blank">Portal Yelly</Link>                                            
+                                        </li>
                                     </ul>
                                 </li>                 
                             </ul>
                         </nav>
                     </div>
                     <div className={styles.botoes}>
-                        <a href="#">Ajuda</a>
-                        <a href="#" className={styles.btn1}>Abrir conta grátis</a>  
-                        <a href="#" className={styles.btn2}>Login</a>   
-                        <a href="#" className="cart">
+                        <Link href="https://yellyhelpcenter.tawk.help/" target="_blank">Ajuda</Link>
+                        <Link href="https://conta.yelly.com.br/register" target="_blank" className={styles.btn1}>Abrir conta grátis</Link>
+                        <Link href="https://conta.yelly.com.br/login" target="_blank" className={styles.btn2}>Login</Link>
+                        <Link href="https://checkout.yelly.com.br/"  className="cart">
                             <Image src="/shopping_cart.svg" alt="Carrinho" width={23.98} height={24} priority/>
-                        </a>
+                        </Link>
+                        
                     </div>
                 </div>
                 
@@ -90,26 +111,29 @@ export function Header (){
                         <Image src="/menu_burguer.svg" alt="Menu Burguer" width={40} height={32}  />
                     </div>
                     <div className={styles.logo}>
-                        <a href="#">
+                        <Link href="/">
                             <Image src="/logoYelly.svg" alt="Logo Yelly" width={102} height={32}  priority />
-                        </a>
+                        </Link>
                     </div>
                     <div className={styles.botoes}>
-                        <a href="#">
+                        <Link href="https://conta.yelly.com.br/login" target="_blank" className={styles.btn2}>
                             <Image src="/account.svg" alt="Login" width={23.98} height={24} priority/>
-                        </a>
-                        <a href="#">
+                        </Link>
+                       
+                        <Link href="https://checkout.yelly.com.br"  className="cart">
                             <Image src="/shopping_cart.svg" alt="Carrinho" width={23.98} height={24} priority/>
-                        </a>
+                        </Link>
+                       
                     </div>
                     <nav>
                             <ul>
                                 <li>
                                     <div >
-                                        <a href="#" className={styles.alignCenter}>
-                                            <Image src="/maquininhas.svg" alt="Maquininhas" width={24} height={24} /> 
-                                            Maquininhas
-                                        </a>
+                                        <Link href="/maquininhas" className={styles.alignCenter}>
+                                           <Image src="/maquininhas.svg" alt="Maquininhas" width={24} height={24} /> 
+                                            Maquininhas`
+                                        </Link>
+                                        
                                     </div>
                                     
                                 </li>
@@ -124,16 +148,20 @@ export function Header (){
                                     </div>
 
                                     <ul className={`${styles.submenu} ${submenusAbertos.solucoes ? styles.show : ""}`}>
-                                        <li><a href="#">Cashback</a></li>
-                                        <li><a href="#">Link de Pagamento</a></li>                                    
+                                         <li>
+                                            <Link href="/cashback">Cashback</Link>                                            
+                                        </li>
+                                        <li>
+                                            <Link href="/link-de-pagamento">Link de Pagamento</Link>
+                                        </li>                                    
                                     </ul>
                                 </li>
                                 <li>
                                     <div >
-                                        <a href="#" className={styles.alignCenter}>
+                                        <Link href="/taxas"  className={styles.alignCenter}>
                                             <Image src="/moeda.svg" alt="dropdown" width={24} height={24} />
                                             Planos e Taxas
-                                        </a>
+                                        </Link>
                                     </div>
                                 
                                 </li>
@@ -149,8 +177,12 @@ export function Header (){
                                         </div>
                                     </div>
                                 <ul className={`${styles.submenu} ${submenusAbertos.parcerias ? styles.show : ""}`}>
-                                        <li><a href="#">Afiliados</a></li>
-                                        <li><a href="#">Yelly Business</a></li>
+                                        <li>
+                                            <Link href="/afiliados">Afiliados</Link>                                            
+                                        </li>
+                                        <li>
+                                            <Link href="/yelly-business">Yelly Business</Link>                                            
+                                        </li>
                                     </ul>
                                 </li>
                                 <li className={styles.dropdown}>
@@ -165,16 +197,24 @@ export function Header (){
                                     </div>
                                     
                                     <ul className={`${styles.submenu} ${submenusAbertos.institucional ? styles.show : ""}`}>
-                                        <li><a href="#">Sobre Nós</a></li>
-                                        <li><a href="#">Blog</a> </li>
-                                        <li><a href="#">Ouvidoria</a></li>
-                                        <li><a href="#">Portal Yelly</a></li>
+                                        <li>
+                                            <Link href="/sobre-nos">Sobre Nós</Link>                                            
+                                        </li>
+                                        <li>
+                                            <Link href="/blog">Blog</Link>                                            
+                                        </li>
+                                        <li>
+                                            <Link href="/ouvidoria">Ouvidoria</Link>                                            
+                                        </li>
+                                        <li>
+                                            <Link href="https://conta.yelly.com.br/login" target="_blank">Portal Yelly</Link>                                            
+                                        </li>
                                     </ul>
                                 </li>                 
                             </ul>
-                            <div className={styles.botoes}>                        
-                                <a href="#" className={styles.btn1}>Abrir conta grátis</a>  
-                                <a href="#" className={styles.btn2}>Ajuda</a>   
+                            <div className={styles.botoes}>                              
+                                <Link href="https://conta.yelly.com.br/register" target="_blank" className={styles.btn1}>Abrir conta grátis</Link>
+                                <Link href="https://yellyhelpcenter.tawk.help/" target="_blank" className={styles.btn2}>Ajuda</Link>
                             </div>
                     </nav>
                 </div>
