@@ -2,7 +2,7 @@ import styles from './beneficios.module.css'
 
 export function Beneficios2(){
     return(
-        <section className={styles.beneficios}>
+        <section className={styles.beneficios} id='Beneficios2'>
             <div className={styles.containerBeneficios}>
 
                 <div className={styles.beneficiosContainer}>

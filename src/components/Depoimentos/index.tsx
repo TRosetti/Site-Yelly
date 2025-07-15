@@ -15,7 +15,7 @@ export function Depoimentos(){
     
 
     return(
-        <section className={styles.depoimentos}>
+        <section className={styles.depoimentos} id='Depoimentos'>
             <div className={styles.depoimentosContainer}>
                 <div className="text">
                     <h2>Quem tem, indica!</h2>

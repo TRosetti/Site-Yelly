@@ -84,7 +84,7 @@ export function ProcessoDeCompra({ apenasProcessoDeCompra = false }: ProcessoDeC
    
 
   return (
-    <section className={stylesHero.processoDeCompra}>
+    <section className={stylesHero.processoDeCompra} id='Processo-de-compra'>
         <div className={stylesHero.container}>
 
             {/* Hero */}

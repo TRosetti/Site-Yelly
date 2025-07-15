@@ -18,7 +18,7 @@ export function Header (){
 
     
     return(
-       <div className={styles.header}>
+       <header className={styles.header}>
         
             <div className={styles.headerContainer}>
                 <div className={styles.desktop}>
@@ -219,7 +219,7 @@ export function Header (){
                     </nav>
                 </div>
             </div>
-        </div>
+        </header>
            
      
     )

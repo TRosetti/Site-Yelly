@@ -32,3 +32,9 @@
   }
 }
 
+@media (max-width: 680px) {
+  .marquee span{
+    font-size: 12px;
+    line-height: 12px;
+  }
+}

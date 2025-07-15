@@ -3,7 +3,7 @@ import styles from './bandeiras.module.css'
 
 export function Bandeiras (){
     return(
-        <section className={styles.bandeiras}>
+        <section className={styles.bandeiras} id='Bandeiras'>
             <div className={styles.bandeirasContainer}>
                 <div className={styles.imageContainer}>
                     <div className={styles.imagens}>

@@ -15,7 +15,7 @@ export function Banner(){
     // console.log(taxas ? taxas?.master?.max[12] : " ")
 
     return (
-        <section >
+        <section id='Banner'>
             <div className={styles.bannerContainer}>
                 <div className={styles.banner}>
                     <div className={styles.text}>

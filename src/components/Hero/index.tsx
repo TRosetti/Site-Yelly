@@ -4,7 +4,7 @@ import {IHero} from "./types"
 
 export function Hero({highlight, title, paragraph, cta, linkCta, linkImg, altImg}:IHero){
     return(
-        <section className={styles.hero}>
+        <section className={styles.hero} id="Hero">
             <div className={styles.heroContainer}>
                 <div className={styles.desktop}>
                     <div className={styles.textContainer}>

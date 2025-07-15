@@ -2,7 +2,7 @@ import styles from './beneficios.module.css';
 
 export function Beneficios3(){
     return(
-        <section className={styles.beneficios}>
+        <section className={styles.beneficios} id='Beneficios3'>
             <div className={styles.beneficiosContainer}>
                 <div className={styles.divImage}>
                     <img src="/Beneficios/Beneficio3-1-DESKTOP.png" alt="" className={styles.desktop}/>

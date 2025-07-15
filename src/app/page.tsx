@@ -9,7 +9,7 @@ import { ProcessoDeCompra } from "@/components/ProcessoDeCompra";
 import { Depoimentos } from "@/components/Depoimentos";
 import { Cards } from "@/components/Cards"
 import { Faq } from "@/components/Faq";
-import { Beneficios3 } from "@/components/Beneficios3";
+// import { Beneficios3 } from "@/components/Beneficios3";
 import { Banner } from "@/components/Banner";
 import { Footer } from "@/components/Footer";
 import styles from './page.module.css'
@@ -60,7 +60,7 @@ export default function Home() {
       <Tarja />
       <Cards />
       <Faq />
-      <Beneficios3 />
+      {/* <Beneficios3 /> */}
       <Banner />
       <Footer />
     </div>  

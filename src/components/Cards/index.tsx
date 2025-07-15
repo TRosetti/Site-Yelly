@@ -2,7 +2,7 @@ import styles from "./cards.module.css"
 
 export function Cards(){
     return(
-        <section>
+        <section id="Cards">
             <div className={styles.cardContainer}>
                 <div className={styles.linha1}>
                     <div className={`${styles.card} ${styles.card1}`} >

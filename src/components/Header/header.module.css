@@ -165,7 +165,7 @@
         
 
         nav{
-            position: fixed;
+            position: absolute;
             top: 104px; /* ou a altura do seu header */
             left: 0;
             width: 100%;

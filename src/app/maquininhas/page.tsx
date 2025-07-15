@@ -3,7 +3,13 @@ import { Tarja } from "@/components/Tarja";
 import { Hero } from "@/components/Hero";
 import { Footer } from "@/components/Footer";
 import styles from './page.module.css'
-
+import { Bandeiras } from "@/components/Bandeiras";
+import { ProcessoDeCompra } from "@/components/ProcessoDeCompra";
+import { Depoimentos } from "@/components/Depoimentos";
+import { Beneficios2 } from "@/components/Beneficios2";
+import { Cards } from "@/components/Cards";
+import { Faq } from "@/components/Faq";
+import { Maquininha } from "@/components/Maquininhas";
 
 
 export default function Maquininhas() {
@@ -39,7 +45,14 @@ export default function Maquininhas() {
       />
 
      
-
+      <Bandeiras />
+      <Maquininha />
+      <ProcessoDeCompra />
+      <Tarja />
+      <Depoimentos />
+      <Beneficios2 />
+      <Cards />
+      <Faq />
       <Footer />
     </div>  
   );

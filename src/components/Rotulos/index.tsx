@@ -2,7 +2,7 @@ import styles from './Rotulos.module.css'
 
 export function Rotulos(){
     return(
-        <section className={styles.Rotulos}>
+        <section className={styles.Rotulos} id='Rotulos'>
             <div className={styles.rotulosContainer}>
                 <h2>Uma empresa que você pode confiar!</h2>
 

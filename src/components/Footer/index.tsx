@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export function Footer (){
     return(
-        <section>
+        <footer>
             <div className={styles.footerContainer}>
                 <div className={styles.topo}>
                     <Link href="/">
@@ -95,6 +95,6 @@ export function Footer (){
                 </div>
                 <p>© Yelly Fintech CNPJ: 42.928.123/0001-37. Todos os direitos reservados. WhatsApp: (27) 99607-5780 | E-mail: contato@yelly.com.br</p>
             </div>
-        </section>
+        </footer>
     )
 }

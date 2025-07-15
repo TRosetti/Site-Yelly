@@ -14,7 +14,7 @@ export function Faq(){
     };
 
     return(
-        <section>
+        <section id='Faq'>
             <div className={styles.faqContainer}>
                 <h2 className={styles.desktop}>Perguntas <br />Frequentes</h2>
                 <h2 className={styles.mobile}>Perguntas Frequentes</h2>
