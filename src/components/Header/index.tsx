@@ -108,7 +108,9 @@ export function Header (){
                 
                 <div className={`${styles.mobile} ${menuAberto ? styles.menuAberto : ""}`}>
                     <div className={styles.menuBurguer} onClick={ ()=> setMenuAberto(!menuAberto) }>
-                        <Image src="/menu_burguer.svg" alt="Menu Burguer" width={40} height={32}  />
+                        <Image  src={menuAberto ? "/menu_close.svg" : "/menu_burguer.svg"} 
+                                alt="Menu Burguer" 
+                                width={40} height={32}  />
                     </div>
                     <div className={styles.logo}>
                         <Link href="/">
@@ -131,7 +133,7 @@ export function Header (){
                                     <div >
                                         <Link href="/maquininhas" className={styles.alignCenter}>
                                            <Image src="/maquininhas.svg" alt="Maquininhas" width={24} height={24} /> 
-                                            Maquininhas`
+                                            Maquininhas
                                         </Link>
                                         
                                     </div>
