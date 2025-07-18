@@ -32,7 +32,7 @@ export function Maquininha(){
                 </div>
             </div>
             <div className={styles.maquininhasContainer}>
-                <img src="/Maquininhas/Pro.png" alt="Maquininha Pro" />
+                <img src="/Maquininhas/PRO.png" alt="Maquininha Pro" />
                 <div className={styles.divText}>
                     <h3>Máquina de cartão completa</h3>
                     <p>Aumente suas vendas com rapidez e economia! Este modelo de maquininha combina o melhor custo-benefício do mercado, uma bateria de longa duração e as taxas exclusivas da Yelly para maximizar seus lucros.</p>
